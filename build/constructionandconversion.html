@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Construction and Conversion · Colors</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><script src="assets/resize_svg.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.png" alt="Colors logo"/></a><div class="docs-package-name"><span class="docs-autofit">Colors</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="index.html">Introduction</a></li><li class="is-active"><a class="tocitem" href="constructionandconversion.html">Construction and Conversion</a><ul class="internal"><li><a class="tocitem" href="#Available-colorspaces-1"><span>Available colorspaces</span></a></li><li><a class="tocitem" href="#Converting-colors-1"><span>Converting colors</span></a></li><li><a class="tocitem" href="#Color-Parsing-1"><span>Color Parsing</span></a></li></ul></li><li><a class="tocitem" href="colordifferences.html">Color Differences</a></li><li><a class="tocitem" href="colormapsandcolorscales.html">Colormaps and Colorscales</a></li><li><a class="tocitem" href="namedcolors.html">Named Colors</a></li><li><a class="tocitem" href="advancedfunctions.html">Advanced Functions</a></li><li><a class="tocitem" href="references.html">References</a></li><li><a class="tocitem" href="migratingfromcolor.html">Migrating from Color.jl</a></li><li><a class="tocitem" href="functionindex.html">Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="constructionandconversion.html">Construction and Conversion</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="constructionandconversion.html">Construction and Conversion</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/kimikage/Colors.jl/blob/master/docs/src/constructionandconversion.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Construction-and-Conversion-1"><a class="docs-heading-anchor" href="#Construction-and-Conversion-1">Construction and Conversion</a><a class="docs-heading-anchor-permalink" href="#Construction-and-Conversion-1" title="Permalink"></a></h1><h2 id="Available-colorspaces-1"><a class="docs-heading-anchor" href="#Available-colorspaces-1">Available colorspaces</a><a class="docs-heading-anchor-permalink" href="#Available-colorspaces-1" title="Permalink"></a></h2><p>The colorspaces used by Colors are defined in <a href="https://github.com/JuliaGraphics/ColorTypes.jl">ColorTypes</a>. Briefly, the defined spaces are:</p><ul><li><p>Red-Green-Blue spaces: <code>RGB</code>, <code>BGR</code>, <code>XRGB</code>, <code>RGBX</code>, <code>RGB24</code>, plus transparent versions <code>ARGB</code>, <code>RGBA</code>, <code>ABGR</code>, <code>BGRA</code>, and <code>ARGB32</code>.</p></li><li><p><code>HSV</code>, <code>HSL</code>, <code>HSI</code>, plus all 6 transparent variants (<code>AHSV</code>, <code>HSVA</code>, <code>AHSL</code>, <code>HSLA</code>, <code>AHSI</code>, <code>HSIA</code>)</p></li></ul><svg xmlns="http://www.w3.org/2000/svg"
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Construction and Conversion · Colors</title><link href="https://fonts.googleapis.com/css?family=Lato|Roboto+Mono" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL="."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="assets/documenter.js"></script><script src="siteinfo.js"></script><script src="../versions.js"></script><script src="assets/resize_svg.js"></script><link href="assets/favicon.ico" rel="icon" type="image/x-icon"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-dark.css" data-theme-name="documenter-dark"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><a class="docs-logo" href="index.html"><img src="assets/logo.png" alt="Colors logo"/></a><div class="docs-package-name"><span class="docs-autofit">Colors</span></div><form class="docs-search" action="search.html"><input class="docs-search-query" id="documenter-search-query" name="q" type="text" placeholder="Search docs"/></form><ul class="docs-menu"><li><a class="tocitem" href="index.html">Introduction</a></li><li class="is-active"><a class="tocitem" href="constructionandconversion.html">Construction and Conversion</a><ul class="internal"><li><a class="tocitem" href="#Available-colorspaces-1"><span>Available colorspaces</span></a></li><li><a class="tocitem" href="#Color-Parsing-1"><span>Color Parsing</span></a></li><li><a class="tocitem" href="#Color-Conversions-1"><span>Color Conversions</span></a></li></ul></li><li><a class="tocitem" href="colordifferences.html">Color Differences</a></li><li><a class="tocitem" href="colormapsandcolorscales.html">Colormaps and Colorscales</a></li><li><a class="tocitem" href="namedcolors.html">Named Colors</a></li><li><a class="tocitem" href="advancedfunctions.html">Advanced Functions</a></li><li><a class="tocitem" href="references.html">References</a></li><li><a class="tocitem" href="functionindex.html">Index</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href="constructionandconversion.html">Construction and Conversion</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href="constructionandconversion.html">Construction and Conversion</a></li></ul></nav><div class="docs-right"><a class="docs-edit-link" href="https://github.com/kimikage/Colors.jl/blob/master/docs/src/constructionandconversion.md" title="Edit on GitHub"><span class="docs-icon fab"></span><span class="docs-label is-hidden-touch">Edit on GitHub</span></a><a class="docs-settings-button fas fa-cog" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-sidebar-button fa fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a></div></header><article class="content" id="documenter-page"><h1 id="Construction-and-Conversion-1"><a class="docs-heading-anchor" href="#Construction-and-Conversion-1">Construction and Conversion</a><a class="docs-heading-anchor-permalink" href="#Construction-and-Conversion-1" title="Permalink"></a></h1><h2 id="Available-colorspaces-1"><a class="docs-heading-anchor" href="#Available-colorspaces-1">Available colorspaces</a><a class="docs-heading-anchor-permalink" href="#Available-colorspaces-1" title="Permalink"></a></h2><p>The colorspaces used by Colors are defined in <a href="https://github.com/JuliaGraphics/ColorTypes.jl">ColorTypes</a>. Briefly, the defined spaces are:</p><ul><li><p>Red-Green-Blue spaces: <code>RGB</code>, <code>BGR</code>, <code>XRGB</code>, <code>RGBX</code>, <code>RGB24</code>, plus transparent versions <code>ARGB</code>, <code>RGBA</code>, <code>ABGR</code>, <code>BGRA</code>, and <code>ARGB32</code>.</p></li><li><p><code>HSV</code>, <code>HSL</code>, <code>HSI</code>, plus all 6 transparent variants (<code>AHSV</code>, <code>HSVA</code>, <code>AHSL</code>, <code>HSLA</code>, <code>AHSI</code>, <code>HSIA</code>)</p></li></ul><svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      id="svg_HSV" version="1.1"
      viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
@@ -380,387 +380,6 @@
 <text x="36" y="29" style="text-anchor:end;" class="n">0</text>
 <text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">HSI</text>
 <path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><ul><li>FOR TEST</li></ul><svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="svg_HSV" version="1.1"
-     viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
-     stroke="none" style="display:inline; margin-left:2em; margin-bottom:1em">
-<defs>
-<filter id="filter_g_HSV" filterUnits="userSpaceOnUse" x="0" y="-0.5" width="15.5" height="16">
-  <feGaussianBlur stdDeviation="0.1" result="blur"/>
-  <feMerge>
-    <feMergeNode in="SourceGraphic"/>
-    <feMergeNode in="blur"/>
-  </feMerge>
-</filter>
-<style type="text/css"><![CDATA[
-  #svg_HSV g, #svg_HSV image {
-    transition: all 400ms ease 200ms;
-  }
-  #svg_HSV path.b {
-    stroke: currentColor;
-    stroke-width: 0.5;
-    opacity: 0;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSV image {
-    opacity: 0;
-    filter:url(#filter_g_HSV);
-  }
-  #svg_HSV rect:active ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSV rect:hover ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSV rect:active ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSV rect:hover ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSV text {
-    fill: currentColor;
-    fill-opacity: 0.8;
-    stroke: #aaa;
-    stroke-width: 0.2;
-    stroke-opacity: 0.4;
-    font-size: 3px;
-  }
-  #svg_HSV text.n {
-    opacity:0;
-  }
-  #svg_HSV:hover text.n {
-    opacity:1;
-  }
-  #svg_HSV:active text.n {
-    opacity:1;
-  }
-]]></style>
-</defs>
-<g>
-  <rect fill="#40807F" width="4" height="30" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)" style="opacity:1;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEV/AAB/MwB/ZgBmgAAzgAAAgAAAgDMAgGYAZoAAM4AAAIAzAIBmAIB/AGZ/ADN/AAB/CQh/OAh/aAhogAg4gAgJgAgJgDgJgGgJaIAJOIAJCIA4CYBoCYB/CWh/CTh/CQh/ERF/PRF/aRFpgBE9gBERgBERgD0RgGkRaYARPYAREYA9EYBpEYB/EWl/ET1/ERF/Ghl/Qhl/axlrgBlCgBkagBkagEIagGsaa4AaQoAaGYBCGoBrGoB/Gmt/GkJ/Ghl/IiJ/RyJ/bSJtgCJHgCIigCIigEcigG0ibYAiR4AiIoBHIoBtIoB/Im1/Ikd/IiJ/Kyp/TSp/bypugCpMgCorgCorgEwrgG4rb4ArTYArK4BMK4BuK4B/K29/K0x/Kyp/MzN/UjN/cDNwgDNSgDMzgDMzgFIzgHAzcH8zUoAzM4BSM4BwM4B/M3B/M1J/MzN/PDt/Vzt/cjtygDtXgDs8gDs8gFc8gHI8cn88V4A8PIBXPIByPIB/PHJ/PFd/PDt/RER/XER/dER0gERcgEREgEREgFxEgHREdH9EXIBERIBcRIB0RIB/RHR/RFx/RER/TUx/YUx/dUx1gExhgExMgExNgGFNgHVNdX9NYYBNTYBhTYB1TYB/TXV/TWF/TUx/VVV/ZlV/d1V3gFVmgFVVgFVVgGZVgHdVd39VZn9VVYBmVYB3VX9/VXd/VWZ/VVV/Xl1/a11/eV15gF1rgF1dgF1dgGtdgHldeX9da39dXoBrXn95Xn9/Xnl/Xmt/Xl1/ZmZ/cGZ/emZ6gGZwgGZmgGZmgHBmgHpmen9mcH9mZn9wZn96Zn9/Znp/ZnB/ZmZ/b25/dW5/fG58gG51gG5ugG5ugHVugHxufH9udX9ub391b398b39/b3x/b3V/b25/d3d/end/fnd+gHd6gHd3gHd3gHp3gH53fn93en93d396d39+d39/d35/d3p/d3d/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH+Nz0coAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,15 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#4D9999" width="4" height="13.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWZAACZPQCZegB6mQA9mQAAmQAAmT0AmXoAepkAPZkAAJk9AJl6AJmZAHqZAD2ZAACZCgqZQwqZfAp8mQpDmQoKmQoKmUMKmXwKfJkKQ5kKCplDCpl8CpmZCnyZCkOZCgqZFBSZSRSZfhR+mRRJmRQUmRQUmUkUmX4UfpkUSZkUFJlJFJl+FJmZFH6ZFEmZFBSZHx+ZUB+ZgR+BmR9QmR8fmR8fmVAfmYEfgZkfUJkfH5lQH5mBH5mZH4GZH1CZHx+ZKSmZVimZgymDmSlWmSkpmSkpmVYpmYMpg5kpVpkpKZlWKZmDKZmZKYOZKVaZKSmZMzOZXDOZhTOFmTNcmTMzmTMzmVwzmYUzhZkzXJkzM5lcM5mFM5mZM4WZM1yZMzOZPT2ZYj2Zhz2HmT1imT09mT09mWI9mYc9h5k9Ypk9PZliPZmHPZmZPYeZPWKZPT2ZR0eZaEeZiUeJmUdomUdHmUdHmWhHmYlHiZlHaJlHR5loR5mJR5mZR4mZR2iZR0eZUlKZblKZi1KLmVJumVJSmVJSmW5SmYtSi5lSbplSUpluUpmLUpmZUouZUm6ZUlKZXFyZdFyZjVyNmVx0mVxcmVxcmXRcmY1cjZlcdJlcXJl0XJmNXJmZXI2ZXHSZXFyZZmaZemaZj2aPmWZ6mWZmmWZmmXpmmY9mj5lmeplmZpl6ZpmPZpmZZo+ZZnqZZmaZcHCZgXCZkXCRmXCBmXBwmXBwmYFwmZFwkZlwgZlwcJmBcJmRcJmZcJGZcIGZcHCZenqZh3qZk3qTmXqHmXp6mXp6mYd6mZN6k5l6h5l6epmHepmTepmZepOZeoeZenqZhYWZjYWZlYWVmYWNmYWFmYWFmY2FmZWFlZmFjZmFhZmNhZmVhZmZhZWZhY2ZhYWZj4+Zk4+Zl4+XmY+TmY+PmY+PmZOPmZePl5mPk5mPj5mTj5mXj5mZj5eZj5OZj4+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZm161JzAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,12 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#336666" width="4" height="13.5" x="36" y="16.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVmAABmKQBmUgBSZgApZgAAZgAAZikAZlIAUmYAKWYAAGYpAGZSAGZmAFJmAClmAABmBwdmLQdmUwdTZgctZgcHZgcHZi0HZlMHU2YHLWYHB2YtB2ZTB2ZmB1NmBy1mBwdmDg5mMQ5mVA5UZg4xZg4OZg4OZjEOZlQOVGYOMWYODmYxDmZUDmZmDlRmDjFmDg5mFBRmNRRmVhRWZhQ1ZhQUZhQUZjUUZlYUVmYUNWYUFGY1FGZWFGZmFFZmFDVmFBRmGxtmORtmVxtXZhs5ZhsbZhsbZjkbZlcbV2YbOWYbG2Y5G2ZXG2ZmG1dmGzlmGxtmIiJmPSJmWCJYZiI9ZiIiZiIiZj0iZlgiWGYiPWYiImY9ImZYImZmIlhmIj1mIiJmKSlmQSlmWilaZilBZikpZikpZkEpZlopWmYpQWYpKWZBKWZaKWZmKVpmKUFmKSlmMDBmRTBmWzBbZjBFZjAwZjAwZkUwZlswW2YwRWYwMGZFMGZbMGZmMFtmMEVmMDBmNjZmSTZmXDZcZjZJZjY2ZjY2Zkk2Zlw2XGY2SWY2NmZJNmZcNmZmNlxmNklmNjZmPT1mTj1mXj1eZj1OZj09Zj09Zk49Zl49XmY9TmY9PWZOPWZePWZmPV5mPU5mPT1mRERmUkRmX0RfZkRSZkREZkREZlJEZl9EX2ZEUmZERGZSRGZfRGZmRF9mRFJmRERmS0tmVktmYUthZktWZktLZktLZlZLZmFLYWZLVmZLS2ZWS2ZhS2ZmS2FmS1ZmS0tmUlJmWlJmYlJiZlJaZlJSZlJSZlpSZmJSYmZSWmZSUmZaUmZiUmZmUmJmUlpmUlJmWFhmXlhmY1hjZlheZlhYZlhYZl5YZmNYY2ZYXmZYWGZeWGZjWGZmWGNmWF5mWFhmX19mYl9mZV9lZl9iZl9fZl9fZmJfZmVfZWZfYmZfX2ZiX2ZlX2ZmX2VmX2JmX19mZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmbyLCexAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,18 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#59B3B2" width="4" height="10.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWyAACyRwCyjwCPswBHswAAswAAs0cAs48Aj7MAR7MAALNHALOPALOyAI+yAEeyAACyDAyyTwyykQyRswxPswwMswwMs08Ms5EMkbMMT7MMDLNPDLORDLOyDJGyDE+yDAyyGBiyVhiylBiUsxhWsxgYsxgYs1YYs5QYlLMYVrMYGLNWGLOUGLOyGJSyGFayGBiyJCSyXSSyliSWsyRdsyQksyQks10ks5YklrMkXbMkJLNdJLOWJLOyJJayJF2yJCSyMDCyZDCymDCYszBkszAwszAws2Qws5gwmLMwZLMwMLNkMLOYMLOyMJiyMGSyMDCyPDuyazuymzubsztrszs8szs8s2s8s5s8m7M8a7M8O7NrPLObPLOyPJuyPGuyPDuyR0eyckeynUeds0dys0dHs0dHs3JHs51HnbJHcrNHR7NyR7OdR7OyR52yR3KyR0eyU1OyeVOyn1Ofs1N5s1NTs1NTs3lTs59Tn7JTebNTU7N5U7OfU7OyU5+yU3myU1OyX1+ygV+yol+is1+Bs19fs19fs4Ffs6JforJfgbNfX7OBX7OiX7OyX6KyX4GyX1+ya2uyiGuypGuks2uIs2trs2trs4hrs6RrpLJriLNra7OIa7Oka7Oya6Sya4iya2uyd3eyj3eyp3ens3ePs3d3s3d3s493s6d3p7J3j7N3d7OPd7Ond7Kyd6eyd4+yd3eyg4OyloOyqYOps4OWs4ODs4ODs5aDs6mDqbKDlrKDg7OWg7Kpg7Kyg6myg5ayg4Oyj4+ynY+yq4+rs4+ds4+Ps4+Ps52Ps6uPq7KPnbKPj7Kdj7Krj7Kyj6uyj52yj4+ym5uypJuyrpuus5uks5ubs5ubs6Sbs66brrKbpLKbm7Kkm7Kum7Kym66ym6Sym5uyp6eyq6eysKews6ers6ens6ens6uns7CnsLKnq7Knp7Krp7Kwp7Kyp7Cyp6uyp6eys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7LbbRyAAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,9 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#264D4C" width="4" height="10.5" x="36" y="19.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVMAABMHwBMPQA9TQAfTQAATQAATR8ATT0APU0AH00AAE0fAE09AE1MAD1MAB9MAABMBQVMIgVMPgU+TQUiTQUFTQUFTSIFTT4FPk0FIk0FBU0iBU0+BU1MBT5MBSJMBQVMCgpMJQpMPwo/TQolTQoKTQoKTSUKTT8KP00KJU0KCk0lCk0/Ck1MCj9MCiVMCgpMDw9MKA9MQA9ATQ8oTQ8PTQ8PTSgPTUAPQE0PKE0PD00oD01AD01MD0BMDyhMDw9MFBRMKxRMQRRBTRQrTRQUTRQUTSsUTUEUQU0UK00UFE0rFE1BFE1MFEFMFCtMFBRMGhlMLhlMQhlCTRkuTRkaTRkaTS4aTUIaQk0aLk0aGk0uGk1CGk1MGkJMGi5MGhlMHx9MMR9MQx9DTR8xTR8fTR8fTTEfTUMfQ0wfMU0fH00xH01DH01MH0NMHzFMHx9MJCRMNCRMRCRETSQ0TSQkTSQkTTQkTUQkREwkNE0kJE00JE1EJE1MJERMJDRMJCRMKSlMNylMRSlFTSk3TSkpTSkpTTcpTUUpRUwpN00pKU03KU1FKU1MKUVMKTdMKSlMLi5MOi5MRi5GTS46TS4uTS4uTTouTUYuRkwuOk0uLk06Lk1GLk1MLkZMLjpMLi5MMzNMPTNMRzNHTTM9TTMzTTMzTT0zTUczR0wzPUwzM009M01HM0xMM0dMMz1MMzNMODhMQDhMSDhITThATTg4TTg4TUA4TUg4SEw4QEw4OE1AOExIOExMOEhMOEBMODhMPT1MQz1MST1JTT1DTT09TT09TUM9TUk9SUw9Q0w9PUxDPUxJPUxMPUlMPUNMPT1MQkJMRkJMSkJKTUJGTUJCTUJCTUZCTUpCSkxCRkxCQkxGQkxKQkxMQkpMQkZMQkJMR0dMSUdMS0dLTUdJTUdHTUdHTUlHTUtHS0xHSUxHR0xJR0xLR0xMR0tMR0lMR0dMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUx+mM+1AAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,21 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#66CCCC" width="4" height="7.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXMAADMUgDMowCjzABSzAAAzAAAzFIAzKMAo8wAUswAAMxSAMyjAMzMAKPMAFLMAADMDg7MWg7Mpg6mzA5azA4OzA4OzFoOzKYOpswOWswODsxaDsymDszMDqbMDlrMDg7MGxvMYhvMqRupzBtizBsbzBsbzGIbzKkbqcwbYswbG8xiG8ypG8zMG6nMG2LMGxvMKSnMainMqymrzClqzCkpzCkpzGopzKspq8wpaswpKcxqKcyrKczMKavMKWrMKSnMNjbMcjbMrjauzDZyzDY2zDY2zHI2zK42rsw2csw2NsxyNsyuNszMNq7MNnLMNjbMRETMekTMsUSxzER6zEREzEREzHpEzLFEscxEesxERMx6RMyxRMzMRLHMRHrMRETMUlLMg1LMtFK0zFKDzFJSzFJSzINSzLRStMxSg8xSUsyDUsy0UszMUrTMUoPMUlLMX1/Mi1/Mtl+2zF+LzF9fzF9fzItfzLZftsxfi8xfX8yLX8y2X8zMX7bMX4vMX1/MbW3Mk23MuW25zG2TzG1tzG1tzJNtzLltucxtk8xtbcyTbcy5bczMbbnMbZPMbW3MenrMm3rMvHq8zHqbzHp6zHp6zJt6zLx6vMx6m8x6esybesy8eszMerzMepvMenrMiIjMo4jMvoi+zIijzIiIzIiIzKOIzL6IvsyIo8yIiMyjiMy+iMzMiL7MiKPMiIjMlpbMq5bMwZbBzJarzJaWzJaWzKuWzMGWwcyWq8yWlsyrlszBlszMlsHMlqvMlpbMo6PMtKPMxKPEzKO0zKOjzKOjzLSjzMSjxMyjtMyjo8y0o8zEo8zMo8TMo7TMo6PMsbHMvLHMx7HHzLG8zLGxzLGxzLyxzMexx8yxvMyxscy8sczHsczMscfMsbzMsbHMvr7MxL7Myb7JzL7EzL6+zL6+zMS+zMm+ycy+xMy+vszEvszJvszMvsnMvsTMvr7MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMx81/igAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,6 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#1A3333" width="4" height="7.5" x="36" y="22.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUzAAAzFAAzKQApMwAUMwAAMwAAMxQAMykAKTMAFDMAADMUADMpADMzACkzABQzAAAzAwMzFgMzKQMpMwMWMwMDMwMDMxYDMykDKTMDFjMDAzMWAzMpAzMzAykzAxYzAwMzBwczGAczKgcqMwcYMwcHMwcHMxgHMyoHKjMHGDMHBzMYBzMqBzMzByozBxgzBwczCgozGwozKworMwobMwoKMwoKMxsKMysKKzMKGzMKCjMbCjMrCjMzCiszChszCgozDg4zHQ4zLA4sMw4dMw4OMw4OMx0OMywOLDMOHTMODjMdDjMsDjMzDiwzDh0zDg4zEREzHxEzLBEsMxEfMxERMxERMx8RMywRLDMRHzMRETMfETMsETMzESwzER8zEREzFBQzIRQzLRQtMxQhMxQUMxQUMyEUMy0ULTMUITMUFDMhFDMtFDMzFC0zFCEzFBQzGBgzIxgzLhguMxgjMxgYMxgYMyMYMy4YLjMYIzMYGDMjGDMuGDMzGC4zGCMzGBgzGxszJRszLhsuMxslMxsbMxsbMyUbMy4bLjMbJTMbGzMlGzMuGzMzGy4zGyUzGxszHx8zJx8zLx8vMx8nMx8fMx8fMycfMy8fLzMfJzMfHzMnHzMvHzMzHy8zHyczHx8zIiIzKSIzMCIwMyIpMyIiMyIiMykiMzAiMDMiKTMiIjMpIjMwIjMzIjAzIikzIiIzJSUzKyUzMCUwMyUrMyUlMyUlMyslMzAlMDMlKzMlJTMrJTMwJTMzJTAzJSszJSUzKSkzLSkzMSkxMyktMykpMykpMy0pMzEpMTMpLTMpKTMtKTMxKTMzKTEzKS0zKSkzLCwzLywzMiwyMywvMywsMywsMy8sMzIsMjMsLzMsLDMvLDMyLDMzLDIzLC8zLCwzMDAzMTAzMjAyMzAxMzAwMzAwMzEwMzIwMjMwMTMwMDMxMDMyMDMzMDIzMDEzMDAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzOSjs8rAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,24 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#73E6E5" width="4" height="4.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXlAADlXADluAC45gBc5gAA5gAA5lwA5rgAuOYAXOYAAOZcAOa4AOblALjlAFzlAADlDw/lZQ/luw+75g9l5g8P5g8P5mUP5rsPu+YPZeYPD+ZlD+a7D+blD7vlD2XlDw/lHx/lbh/lvh++5h9u5h8f5h8f5m4f5r4fvuYfbuYfH+ZuH+a+H+blH77lH27lHx/lLi7ldy7lwS7B5i535i4u5i4u5ncu5sEuweYud+YuLuZ3LubBLublLsHlLnflLi7lPT3lgT3lxD3E5j2B5j095j095oE95sQ9xOY9geY9PeaBPebEPeblPcTlPYHlPT3lTUzlikzlx0zH5kyK5kxN5kxN5opN5sdNx+ZNiuZNTOaKTebHTeblTcflTYrlTUzlXFzlk1zlylzK5lyT5lxc5lxc5pNc5spcyuZck+ZcXOaTXObKXOblXMrlXJPlXFzla2vlnGvlzWvN5muc5mtr5mtr5pxr5s1rzeVrnOZra+aca+bNa+bla83la5zla2vlenrlpXrl0HrQ5nql5np65np65qV65tB60OV6peZ6eualeubQeubletDleqXlenrliorlrorl04rT5oqu5oqK5oqK5q6K5tOK0+WKruaKiuauiubTiublitPliq7liorlmZnluJnl1pnW5pm45pmZ5pmZ5riZ5taZ1uWZuOaZmea4mebWmeXlmdblmbjlmZnlqKjlwajl2ajZ5qjB5qio5qio5sGo5tmo2eWoweWoqObBqOXZqOXlqNnlqMHlqKjluLjlyrjl3Ljc5rjK5ri45ri45sq45ty43OW4yuW4uOXKuOXcuOXluNzluMrluLjlx8fl08fl38ff5sfT5sfH5sfH5tPH5t/H3+XH0+XHx+XTx+Xfx+Xlx9/lx9Plx8fl1tbl3Nbl4tbi5tbc5tbW5tbW5tzW5uLW4uXW3OXW1uXc1uXi1uXl1uLl1tzl1tbl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uX2JtjGAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,3 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#0D1A19" width="4" height="4.5" x="36" y="25.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUZAAAZCgAZFAAUGgAKGgAAGgAAGgoAGhQAFBoAChoAABoKABoUABoZABQZAAoZAAAZAgIZCwIZFQIVGgILGgICGgICGgsCGhUCFRoCCxoCAhoLAhoVAhoZAhUZAgsZAgIZAwMZDAMZFQMVGgMMGgMDGgMDGgwDGhUDFRoDDBoDAxoMAxoVAxoZAxUZAwwZAwMZBQUZDQUZFQUVGgUNGgUFGgUFGg0FGhUFFRkFDRoFBRoNBRoVBRoZBRUZBQ0ZBQUZBwcZDgcZFgcWGgcOGgcHGgcHGg4HGhYHFhkHDhoHBxoOBxoWBxoZBxYZBw4ZBwcZCQgZDwgZFggWGggPGggJGggJGg8JGhYJFhkJDxoJCRoPCRoWCRoZCRYZCQ8ZCQgZCgoZEAoZFgoWGgoQGgoKGgoKGhAKGhYKFhkKEBoKChoQChoWChoZChYZChAZCgoZDAwZEQwZFwwXGgwRGgwMGgwMGhEMGhcMFxkMERoMDBoRDBoXDBoZDBcZDBEZDAwZDg4ZEg4ZFw4XGg4SGg4OGg4OGhIOGhcOFxkOEhkODhoSDhoXDhkZDhcZDhIZDg4ZDw8ZEw8ZFw8XGg8TGg8PGg8PGhMPGhcPFxkPExkPDxoTDxoXDxkZDxcZDxMZDw8ZEREZFBEZGBEYGhEUGhERGhERGhQRGhgRGBkRFBkRERkUERkYERkZERgZERQZEREZExMZFRMZGBMYGhMVGhMTGhMTGhUTGhgTGBkTFRkTExkVExkYExkZExgZExUZExMZFBQZFhQZGBQYGhQWGhQUGhQUGhYUGhgUGBkUFhkUFBkWFBkYFBkZFBgZFBYZFBQZFhYZFxYZGRYZGhYXGhYWGhYWGhcWGhkWGRkWFxkWFhkXFhkZFhkZFhkZFhcZFhYZGBgZGBgZGRgZGhgYGhgYGhgYGhgYGhkYGRkYGBkYGBkYGBkZGBkZGBkZGBgZGBgZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhnDW0+mAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,27 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#80FFFF" width="4" height="1.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/ZgD/zADM/wBm/wAA/wAA/2YA/8wAzP8AZv8AAP9mAP/MAP//AMz/AGb/AAD/ERH/cBH/zxHP/xFw/xER/xER/3AR/88Rz/8RcP8REf9wEf/PEf//Ec//EXD/ERH/IiL/eiL/0yLT/yJ6/yIi/yIi/3oi/9Mi0/8iev8iIv96Iv/TIv//ItP/Inr/IiL/MzP/hTP/1jPW/zOF/zMz/zMz/4Uz/9Yz1v8zhf8zM/+FM//WM///M9b/M4X/MzP/RET/j0T/2kTa/0SP/0RE/0RE/49E/9pE2v9Ej/9ERP+PRP/aRP//RNr/RI//RET/VVX/mVX/3VXd/1WZ/1VV/1VV/5lV/91V3f9Vmf9VVf+ZVf/dVf//Vd3/VZn/VVX/Zmb/o2b/4Gbg/2aj/2Zm/2Zm/6Nm/+Bm4P9mo/9mZv+jZv/gZv//ZuD/ZqP/Zmb/d3f/rXf/5Hfk/3et/3d3/3d3/613/+R35P93rf93d/+td//kd///d+T/d63/d3f/iIj/uIj/54jn/4i4/4iI/4iI/7iI/+eI5/+IuP+IiP+4iP/niP//iOf/iLj/iIj/mZn/wpn/65nr/5nC/5mZ/5mZ/8KZ/+uZ6/+Zwv+Zmf/Cmf/rmf//mev/mcL/mZn/qqr/zKr/7qru/6rM/6qq/6qq/8yq/+6q7v+qzP+qqv/Mqv/uqv//qu7/qsz/qqr/u7v/1rv/8bvx/7vW/7u7/7u7/9a7//G78f+71v+7u//Wu//xu///u/H/u9b/u7v/zMz/4Mz/9cz1/8zg/8zM/8zM/+DM//XM9f/M4P/MzP/gzP/1zP//zPX/zOD/zMz/3d3/693/+N34/93r/93d/93d/+vd//jd+P/d6//d3f/r3f/43f//3fj/3ev/3d3/7u7/9e7//O78/+71/+7u/+7u//Xu//zu/P/u9f/u7v/17v/87v//7vz/7vX/7u7///////////////////////////////////////////////////////////////9im4txAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,0 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#000000" width="4" height="1.5" x="36" y="28.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzMPSIAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,30 h 5" class="b"/>
-</g>
-<text x="29.5" y="26" style="text-anchor:end;">H</text>
-<text x="29.5" y="29" style="text-anchor:end;" class="n">360</text>
-<text x="15" y="29" style="text-anchor:middle;" class="n">180</text>
-<text x="6" y="3" style="text-anchor:start;">S</text>
-<text x="0.5" y="3" style="text-anchor:start;" class="n">1</text>
-<text x="0.5" y="16" style="text-anchor:start;" class="n">0.5</text>
-<text x="0.5" y="29" style="text-anchor:start;" class="n">0</text>
-<text style="text-anchor:middle;" transform="translate(35,15) rotate(-90)">V</text>
-<text x="36" y="3" style="text-anchor:end;" class="n">1</text>
-<text x="36" y="29" style="text-anchor:end;" class="n">0</text>
-<text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">HSV</text>
-<path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="svg_HSL" version="1.1"
-     viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
-     stroke="none" style="display:inline; margin-left:2em; margin-bottom:1em">
-<defs>
-<filter id="filter_g_HSL" filterUnits="userSpaceOnUse" x="0" y="-0.5" width="15.5" height="16">
-  <feGaussianBlur stdDeviation="0.1" result="blur"/>
-  <feMerge>
-    <feMergeNode in="SourceGraphic"/>
-    <feMergeNode in="blur"/>
-  </feMerge>
-</filter>
-<style type="text/css"><![CDATA[
-  #svg_HSL g, #svg_HSL image {
-    transition: all 400ms ease 200ms;
-  }
-  #svg_HSL path.b {
-    stroke: currentColor;
-    stroke-width: 0.5;
-    opacity: 0;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSL image {
-    opacity: 0;
-    filter:url(#filter_g_HSL);
-  }
-  #svg_HSL rect:active ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSL rect:hover ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSL rect:active ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSL rect:hover ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSL text {
-    fill: currentColor;
-    fill-opacity: 0.8;
-    stroke: #aaa;
-    stroke-width: 0.2;
-    stroke-opacity: 0.4;
-    font-size: 3px;
-  }
-  #svg_HSL text.n {
-    opacity:0;
-  }
-  #svg_HSL:hover text.n {
-    opacity:1;
-  }
-  #svg_HSL:active text.n {
-    opacity:1;
-  }
-]]></style>
-</defs>
-<g>
-  <rect fill="#40BFBF" width="4" height="30" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)" style="opacity:1;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/ZgD/zADM/wBm/wAA/wAA/2YA/8wAzP8AZv8AAP9mAP/MAP//AMz/AGb/AAD2CQj2aAj2xwjH9who9wgJ9wgJ92gJ98cJx/cJaPcJCPdoCffHCff2Ccf2CWj2CQjuERHuaRHuwhHC7hFp7hER7hER7mkR7sIRwu4Rae4REe5pEe7CEe7uEcLuEWnuERHlGhnlaxnlvRm95hlr5hka5hka5msa5r0aveYaa+YaGeZrGua9GublGr3lGmvlGhndIiLdbSLduCK43SJt3SIi3SIi3W0i3bgiuN0ibd0iIt1tIt24It3dIrjdIm3dIiLUKyrUbyrUsyqy1Spu1Sor1Sor1W4r1bIrs9UrbtUrKtVvK9WyK9XUK7PUK27UKyrMMzPMcDPMrTOtzDNwzDMzzDMzzHAzzK0zrcwzcMwzM8xwM8ytM8zMM63MM3DMMzPDPDvDcjvDqDuoxDtyxDs8xDs8xHI8xKg8qMQ8csQ8O8RyPMSoPMTDPKjDPHLDPDu7RES7dES7o0Sju0R0u0REu0REu3REu6NEo7tEdLtERLt0RLujRLu7RKO7RHS7RESyTUyydUyynkyes0x1s0xNs0xNs3VNs55NnrJNdbNNTbN1TbOeTbOyTZ6yTXWyTUyqVVWqd1WqmVWZqlV3qlVVqlVVqndVqplVmapVd6pVVap3VaqZVaqqVZmqVXeqVVWhXl2heV2hlF2Uol15ol1dol1eonleopRelKFeeaJeXqJ5XqKUXqKhXpShXnmhXl2ZZmaZemaZj2aPmWZ6mWZmmWZmmXpmmY9mj5lmeplmZpl6ZpmPZpmZZo+ZZnqZZmaQb26QfG6Qim6KkW58kW5ukW5ukXxukYpuipBufJBub5B8b5CKb5CQb4qQb3yQb26Id3eIfneIhXeFiHd+iHd3iHd3iH53iIV3hYh3foh3d4h+d4iFd4iId4WId36Id3d/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9Pi3ROAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,15 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#66CCCC" width="4" height="13.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/MzP/hTP/1jPW/zOF/zMz/zMz/4Uz/9Yz1v8zhf8zM/+FM//WM///M9b/M4X/MzP4Ojr4hjr40jrS+DqG+Do6+Do6+IY6+NI60vg6hvg6OviGOvjSOvj4OtL4Oob4OjrxQUHxh0HxzkHO8UGH8UFB8UFB8YdB8c5BzvFBh/FBQfGHQfHOQfHxQc7xQYfxQUHrR0friUfrykfK60eJ60dH60dH64lH68pHyutHietHR+uJR+vKR+vrR8rrR4nrR0fkTk7kik7kxk7G5E6K5E5O5E5O5IpO5MZOxuROiuROTuSKTuTGTuTkTsbkTorkTk7dVVXdi1XdwlXC3VWL3VVV3VVV3YtV3cJVwt1Vi91VVd2LVd3CVd3dVcLdVYvdVVXWXFzWjVzWvly+1lyN1lxc1lxc1o1c1r5cvtZcjdZcXNaNXNa+XNbWXL7WXI3WXFzPY2PPjmPPumO6z2OOz2Njz2Njz45jz7pjus9jjs9jY8+OY8+6Y8/PY7rPY47PY2PJaWnJj2nJtmm2yWmPyWlpyWlpyY9pybZptslpj8lpacmPacm2acnJabbJaY/JaWnCcHDCkXDCsXCxwnCRwnBwwnBwwpFwwrFwscJwkcJwcMKRcMKxcMLCcLHCcJHCcHC7d3e7kne7rXetu3eSu3d3u3d3u5J3u613rbt3krt3d7uSd7utd7u7d627d5K7d3e0fn60lH60qX6ptH6UtH5+tH5+tJR+tKl+qbR+lLR+frSUfrSpfrS0fqm0fpS0fn6thYWtlYWtpYWlrYWVrYWFrYWFrZWFraWFpa2Fla2Fha2Vha2lha2thaWthZWthYWni4unlounoYuhp4uWp4uLp4uLp5aLp6GLoaeLlqeLi6eWi6ehi6eni6Gni5ani4ugkpKgmJKgnZKdoJKYoJKSoJKSoJiSoJ2SnaCSmKCSkqCYkqCdkqCgkp2gkpigkpKZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZnnldcYAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,12 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#339999" width="4" height="13.5" x="36" y="16.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXMAADMUgDMowCjzABSzAAAzAAAzFIAzKMAo8wAUswAAMxSAMyjAMzMAKPMAFLMAADFBwfFUwfFnwefxQdTxQcHxQcHxVMHxZ8Hn8UHU8UHB8VTB8WfB8XFB5/FB1PFBwe+Dg6+VA6+mw6bvg5Uvg4Ovg4OvlQOvpsOm74OVL4ODr5UDr6bDr6+Dpu+DlS+Dg64FBS4VhS4lxSXuBRWuBQUuBQUuFYUuJcUl7gUVrgUFLhWFLiXFLi4FJe4FFa4FBSxGxuxVxuxkxuTsRtXsRsbsRsbsVcbsZMbk7EbV7EbG7FXG7GTG7GxG5OxG1exGxuqIiKqWCKqjyKPqiJYqiIiqiIiqlgiqo8ij6oiWKoiIqpYIqqPIqqqIo+qIliqIiKjKSmjWimjiymLoylaoykpoykpo1opo4spi6MpWqMpKaNaKaOLKaOjKYujKVqjKSmcMDCcWzCchzCHnDBbnDAwnDAwnFswnIcwh5wwW5wwMJxbMJyHMJycMIecMFucMDCWNjaWXDaWgzaDljZcljY2ljY2llw2loM2g5Y2XJY2NpZcNpaDNpaWNoOWNlyWNjaPPT2PXj2Pfj1+jz1ejz09jz09j149j349fo89Xo89PY9ePY9+PY+PPX6PPV6PPT2IRESIX0SIekR6iERfiEREiEREiF9EiHpEeohEX4hERIhfRIh6RIiIRHqIRF+IRESBS0uBYUuBdkt2gUthgUtLgUtLgWFLgXZLdoFLYYFLS4FhS4F2S4GBS3aBS2GBS0t6UlJ6YlJ6clJyelJielJSelJSemJSenJScnpSYnpSUnpiUnpyUnp6UnJ6UmJ6UlJ0WFh0Y1h0blhudFhjdFhYdFhYdGNYdG5YbnRYY3RYWHRjWHRuWHR0WG50WGN0WFhtX19tZV9tal9qbV9lbV9fbV9fbWVfbWpfam1fZW1fX21lX21qX21tX2ptX2VtX19mZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmbKRAaHAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,18 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#8CD9D9" width="4" height="10.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/Zmb/o2b/4Gbg/2aj/2Zm/2Zm/6Nm/+Bm4P9mo/9mZv+jZv/gZv//ZuD/ZqP/Zmb6a2v6pGv63Wvd+muk+mtr+mtr+qRr+t1r3fprpPpra/qka/rda/r6a936a6T6a2v1cHD1pXD12nDa9XCl9XBw9XBw9aVw9dpw2vVwpfVwcPWlcPXacPX1cNr1cKX1cHDwdXXwpnXw13XX8HWm8HV18HV18KZ18Nd11/B1pvB1dfCmdfDXdfDwddfwdabwdXXrenrrp3rr1HrU63qn63p663p666d669R61Ot6p+t6euuneuvUeuvretTreqfrenrlgH/lqH/l0X/R5n+o5n+A5n+A5qiA5tGA0eWAqOaAgOaogObRgOblgNHlgKjlgH/ghYXgqYXgzoXO4IWp4IWF4IWF4KmF4M6FzuCFqeCFheCpheDOheDghc7ghanghYXbiorbqorby4rL24qq24qK24qK26qK28uKy9uKqtuKituqitvLitvbisvbiqrbiorWj4/Wq4/WyI/I1o+r1o+P1o+P1quP1siPyNaPq9aPj9arj9bIj9bWj8jWj6vWj4/RlJTRrJTRxZTF0ZSs0ZSU0ZSU0ayU0cWUxdGUrNGUlNGslNHFlNHRlMXRlKzRlJTMmZnMrZnMwpnCzJmtzJmZzJmZzK2ZzMKZwsyZrcyZmcytmczCmczMmcLMma3MmZnHnp7Hrp7Hv56/x56ux56ex56ex66ex7+ev8eerseenseunse/nsfHnr/Hnq7Hnp7Co6PCr6PCvKO8wqOvwqOjwqOjwq+jwryjvMKjr8Kjo8Kvo8K8o8LCo7zCo6/Co6O9qKi9sKi9uai5vaiwvaiovaiovbCovbmoub2osL2oqL2wqL25qL29qLm9qLC9qKi4ra24sa24tq22uK2xuK2tuK2tuLGtuLattritsbitrbixrbi2rbi4rba4rbG4ra2ys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7IkRNUAAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,9 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#267373" width="4" height="10.5" x="36" y="19.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWZAACZPQCZegB6mQA9mQAAmQAAmT0AmXoAepkAPZkAAJk9AJl6AJmZAHqZAD2ZAACUBQWUPgWUdwV3lAU+lAUFlAUFlD4FlHcFd5QFPpQFBZQ+BZR3BZSUBXeUBT6UBQWPCgqPPwqPdAp0jwo/jwoKjwoKjz8Kj3QKdI8KP48KCo8/Co90Co+PCnSPCj+PCgqKDw+KQA+KcQ9xig9Aig8Pig8PikAPinEPcYoPQIoPD4pAD4pxD4qKD3GKD0CKDw+FFBSFQRSFbhRuhRRBhRQUhRQUhUEUhW4UboUUQYUUFIVBFIVuFIWFFG6FFEGFFBR/Ghl/Qhl/axlrgBlCgBkagBkagEIagGsaa4AaQoAaGYBCGoBrGoB/Gmt/GkJ/Ghl6Hx96Qx96aB9oeh9Deh8feh8fekMfemgfaHofQ3ofH3pDH3poH3p6H2h6H0N6Hx91JCR1RCR1ZSRldSREdSQkdSQkdUQkdWUkZXUkRHUkJHVEJHVlJHV1JGV1JER1JCRwKSlwRSlwYilicClFcCkpcCkpcEUpcGIpYnApRXApKXBFKXBiKXBwKWJwKUVwKSlrLi5rRi5rXy5fay5Gay4uay4ua0Yua18uX2suRmsuLmtGLmtfLmtrLl9rLkZrLi5mMzNmRzNmXDNcZjNHZjMzZjMzZkczZlwzXGYzR2YzM2ZHM2ZcM2ZmM1xmM0dmMzNhODhhSDhhWThZYThIYTg4YTg4YUg4YVk4WWE4SGE4OGFIOGFZOGFhOFlhOEhhODhcPT1cST1cVj1WXD1JXD09XD09XEk9XFY9Vlw9SVw9PVxJPVxWPVxcPVZcPUlcPT1XQkJXSkJXU0JTV0JKV0JCV0JCV0pCV1NCU1dCSldCQldKQldTQldXQlNXQkpXQkJSR0dSS0dSUEdQUkdLUkdHUkdHUktHUlBHUFJHS1JHR1JLR1JQR1JSR1BSR0tSR0dMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUwi1v6oAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,21 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#B2E6E5" width="4" height="7.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/mZn/wpn/65nr/5nC/5mZ/5mZ/8KZ/+uZ6/+Zwv+Zmf/Cmf/rmf//mev/mcL/mZn8nJz8wpz86Zzp/JzC/Jyc/Jyc/MKc/Omc6fycwvycnPzCnPzpnPz8nOn8nML8nJz4oKD4w6D456Dn+KDD+KCg+KCg+MOg+Oeg5/igw/igoPjDoPjnoPj4oOf4oMP4oKD1o6P1xKP15KPk9aPE9aOj9aOj9cSj9eSj5PWjxPWjo/XEo/Xko/X1o+T1o8T1o6Pxp6fxxafx4qfi8afF8aen8aen8cWn8eKn4vGnxfGnp/HFp/Hip/Hxp+Lxp8Xxp6fuqqruxaru4Krg7qrF7qqq7qqq7sWq7uCq4O6qxe6qqu7Fqu7gqu7uquDuqsXuqqrrra3rxq3r3q3e663G662t662t68at696t3uutxuutrevGreverevrrd7rrcbrra3nsbHnx7Hn3LHc57HH57Gx57Gx58ex59yx3Oexx+exsefHsefcsefnsdznscfnsbHktLTkx7Tk2rTa5LTH5LS05LS05Me05Nq02uS0x+S0tOTHtOTatOTktNrktMfktLTguLjgyLjg2LjY4LjI4Li44Li44Mi44Ni42OC4yOC4uODIuODYuODguNjguMjguLjdu7vdybvd1rvW3bvJ3bu73bu73cm73da71t27yd27u93Ju93Wu93du9bdu8ndu7vavr7ayb7a1L7U2r7J2r6+2r6+2sm+2tS+1Nq+ydq+vtrJvtrUvtravtTavsnavr7WwsLWysLW0sLS1sLK1sLC1sLC1srC1tLC0tbCytbCwtbKwtbSwtbWwtLWwsrWwsLTxcXTy8XT0MXQ08XL08XF08XF08vF09DF0NPFy9PFxdPLxdPQxdPTxdDTxcvTxcXPycnPy8nPzsnOz8nLz8nJz8nJz8vJz87Jzs/Jy8/Jyc/Lyc/Oyc/Pyc7PycvPycnMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMw+MZKyAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,6 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#1A4D4C" width="4" height="7.5" x="36" y="22.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVmAABmKQBmUgBSZgApZgAAZgAAZikAZlIAUmYAKWYAAGYpAGZSAGZmAFJmAClmAABjAwNjKQNjUANQYwMpYwMDYwMDYykDY1ADUGMDKWMDA2MpA2NQA2NjA1BjAyljAwNfBwdfKgdfTgdOXwcqXwcHXwcHXyoHX04HTl8HKl8HB18qB19OB19fB05fBypfBwdcCgpcKwpcSwpLXAorXAoKXAoKXCsKXEsKS1wKK1wKClwrClxLClxcCktcCitcCgpYDg5YLA5YSQ5JWA4sWA4OWA4OWCwOWEkOSVgOLFgODlgsDlhJDlhYDklYDixYDg5VERFVLBFVRxFHVREsVRERVRERVSwRVUcRR1URLFUREVUsEVVHEVVVEUdVESxVERFSFBRSLRRSRRRFUhQtUhQUUhQUUi0UUkUURVIULVIUFFItFFJFFFJSFEVSFC1SFBROGBhOLhhOQxhDThguThgYThgYTi4YTkMYQ04YLk4YGE4uGE5DGE5OGENOGC5OGBhLGxtLLhtLQRtBSxsuSxsbSxsbSy4bS0EbQUsbLksbG0suG0tBG0tLG0FLGy5LGxtHHx9HLx9HPx8/Rx8vRx8fRx8fRy8fRz8fP0cfL0cfH0cvH0c/H0dHHz9HHy9HHx9EIiJEMCJEPSI9RCIwRCIiRCIiRDAiRD0iPUQiMEQiIkQwIkQ9IkREIj1EIjBEIiJBJSVBMCVBOyU7QSUwQSUlQSUlQTAlQTslO0ElMEElJUEwJUE7JUFBJTtBJTBBJSU9KSk9MSk9OSk5PSkxPSkpPSkpPTEpPTkpOT0pMT0pKT0xKT05KT09KTk9KTE9KSk6LCw6Miw6Nyw3OiwyOiwsOiwsOjIsOjcsNzosMjosLDoyLDo3LDo6LDc6LDI6LCw2MDA2MjA2NTA1NjAyNjAwNjAwNjIwNjUwNTYwMjYwMDYyMDY1MDY2MDU2MDI2MDAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMTT5/bAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,24 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#D9F2F2" width="4" height="4.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/zMz/4Mz/9cz1/8zg/8zM/8zM/+DM//XM9f/M4P/MzP/gzP/1zP//zPX/zOD/zMz9zs794c799M70/c7h/c7O/c7O/eHO/fTO9P3O4f3Ozv3hzv30zv39zvT9zuH9zs78z8/84c/888/z/M/h/M/P/M/P/OHP/PPP8/zP4fzPz/zhz/zzz/z8z/P8z+H8z8/60dH64dH68tHy+tHh+tHR+tHR+uHR+vLR8vrR4frR0frh0fry0fr60fL60eH60dH409P44tP48dPx+NPi+NPT+NPT+OLT+PHT8fjT4vjT0/ji0/jx0/j40/H40+L409P21dT24tT28NTw99Ti99TU99TU9+LU9/DU8PbU4vbU1fbi1fbw1fb21fD21eL21dT11tb14tb179bv9dbi9dbW9dbW9eLW9e/W7/XW4vXW1vXi1vXv1vX11u/11uL11tbz2Njz49jz7tju89jj89jY89jY8+PY8+7Y7vPY4/PY2PPj2PPu2PPz2O7z2OPz2Njx2trx49rx7drt8drj8dra8dra8ePa8e3a7fHa4/Ha2vHj2vHt2vHx2u3x2uPx2trw29vw49vw7Nvs8Nvj8Nvb8Nvb8OPb8Ozb7PDb4/Db2/Dj2/Ds2/Dw2+zw2+Pw29vu3d3u5N3u693r7t3k7t3d7t3d7uTd7uvd6+7d5O7d3e7k3e7r3e7u3evu3eTu3d3s39/s5N/s6t/q7N/k7N/f7N/f7OTf7Orf6uzf5Ozf3+zk3+zq3+zs3+rs3+Ts39/r4ODr5ODr6eDp6+Dk6+Dg6+Dg6+Tg6+ng6evg5Ovg4Ovk4Ovp4Ovr4Onr4OTr4ODp4uLp5eLp6OLo6eLl6eLi6eLi6eXi6eji6Oni5eni4unl4uno4unp4ujp4uXp4uLn5OTn5eTn5+Tn5+Tl5+Tk5+Tk5+Xk5+fk5+fk5efk5Ofl5Ofn5Ofn5Ofn5OXn5OTl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXEfKrOAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,3 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#0D2626" width="4" height="4.5" x="36" y="25.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUzAAAzFAAzKQApMwAUMwAAMwAAMxQAMykAKTMAFDMAADMUADMpADMzACkzABQzAAAxAgIxFQIxKAIoMQIVMQICMQICMRUCMSgCKDECFTECAjEVAjEoAjExAigxAhUxAgIwAwMwFQMwJwMnMAMVMAMDMAMDMBUDMCcDJzADFTADAzAVAzAnAzAwAycwAxUwAwMuBQUuFQUuJgUmLgUVLgUFLgUFLhUFLiYFJi4FFS4FBS4VBS4mBS4uBSYuBRUuBQUsBwcsFgcsJQclLAcWLAcHLAcHLBYHLCUHJSwHFiwHBywWBywlBywsByUsBxYsBwcqCQgqFggqJAgkKwgWKwgJKwgJKxYJKyQJJCsJFisJCSsWCSskCSsqCSQqCRYqCQgpCgopFgopIwojKQoWKQoKKQoKKRYKKSMKIykKFikKCikWCikjCikpCiMpChYpCgonDAwnFwwnIgwiJwwXJwwMJwwMJxcMJyIMIicMFycMDCcXDCciDCcnDCInDBcnDAwlDg4lFw4lIQ4hJQ4XJQ4OJQ4OJRcOJSEOISUOFyUODiUXDiUhDiUlDiElDhclDg4kDw8kFw8kIA8gJA8XJA8PJA8PJBcPJCAPICQPFyQPDyQXDyQgDyQkDyAkDxckDw8iEREiGBEiHxEfIhEYIhERIhERIhgRIh8RHyIRGCIRESIYESIfESIiER8iERgiEREgExMgGBMgHhMeIBMYIBMTIBMTIBgTIB4THiATGCATEyAYEyAeEyAgEx4gExggExMfFBQfGBQfHRQdHxQYHxQUHxQUHxgUHx0UHR8UGB8UFB8YFB8dFB8fFB0fFBgfFBQdFhYdGRYdHBYcHRYZHRYWHRYWHRkWHRwWHB0WGR0WFh0ZFh0cFh0dFhwdFhkdFhYbGBgbGRgbGxgbGxgZGxgYGxgYGxkYGxsYGxsYGRsYGBsZGBsbGBsbGBsbGBkbGBgZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhlg9ww0AAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,27 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#FFFFFF" width="4" height="1.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+/LkhhAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,0 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#000000" width="4" height="1.5" x="36" y="28.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzMPSIAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,30 h 5" class="b"/>
-</g>
-<text x="29.5" y="26" style="text-anchor:end;">H</text>
-<text x="29.5" y="29" style="text-anchor:end;" class="n">360</text>
-<text x="15" y="29" style="text-anchor:middle;" class="n">180</text>
-<text x="6" y="3" style="text-anchor:start;">S</text>
-<text x="0.5" y="3" style="text-anchor:start;" class="n">1</text>
-<text x="0.5" y="16" style="text-anchor:start;" class="n">0.5</text>
-<text x="0.5" y="29" style="text-anchor:start;" class="n">0</text>
-<text style="text-anchor:middle;" transform="translate(35,15) rotate(-90)">L</text>
-<text x="36" y="3" style="text-anchor:end;" class="n">1</text>
-<text x="36" y="29" style="text-anchor:end;" class="n">0</text>
-<text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">HSL</text>
-<path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="svg_HSI" version="1.1"
-     viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
-     stroke="none" style="display:inline; margin-left:2em; margin-bottom:1em">
-<defs>
-<filter id="filter_g_HSI" filterUnits="userSpaceOnUse" x="0" y="-0.5" width="15.5" height="16">
-  <feGaussianBlur stdDeviation="0.1" result="blur"/>
-  <feMerge>
-    <feMergeNode in="SourceGraphic"/>
-    <feMergeNode in="blur"/>
-  </feMerge>
-</filter>
-<style type="text/css"><![CDATA[
-  #svg_HSI g, #svg_HSI image {
-    transition: all 400ms ease 200ms;
-  }
-  #svg_HSI path.b {
-    stroke: currentColor;
-    stroke-width: 0.5;
-    opacity: 0;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSI image {
-    opacity: 0;
-    filter:url(#filter_g_HSI);
-  }
-  #svg_HSI rect:active ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSI rect:hover ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_HSI rect:active ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSI rect:hover ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_HSI text {
-    fill: currentColor;
-    fill-opacity: 0.8;
-    stroke: #aaa;
-    stroke-width: 0.2;
-    stroke-opacity: 0.4;
-    font-size: 3px;
-  }
-  #svg_HSI text.n {
-    opacity:0;
-  }
-  #svg_HSI:hover text.n {
-    opacity:1;
-  }
-  #svg_HSI:active text.n {
-    opacity:1;
-  }
-]]></style>
-</defs>
-<g>
-  <rect fill="#409F9F" width="4" height="30" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)" style="opacity:1;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/bwDXqACo1wBv/wAA/wAA/28A16gAqNcAb/8AAP9vAP+oANfXAKj/AG//AAD/CQj/cAjRpQil0Qhw/wgJ/wgJ/3AJ0aUJpdEJcP8JCP9wCf+lCdHRCaX/CXD/CQj/ERH8cRHLohGiyxFx/BER/xER/HERy6IRossRcfwREf9xEfyiEcvLEaL8EXH/ERH/GhnzchnFoBmgxRly8xka/xka83IaxaAaoMUacvMaGf9yGvOgGsXFGqDzGnL/Ghn/IiLpcyK/nSKdvyJz6SIi/yIi6XMiv50inb8ic+kiIv9zIumdIr+/Ip3pInP/IiL/KyrfdSq6miqauip13yor/yor33Urupormrordd8rKv91K9+aK7q6K5rfK3X/Kyr/MzPWdjO0mDOYtDN21jMz/zMz1nYztJgzmLQzdtYzM/92M9aYM7S0M5jWM3b/MzP/PDvMdzuulTuVrjt3zDs8/zs8zHc8rpU8la48d8w8O/93PMyVPK6uPJXMPHf/PDv2RETDeESokkSSqER4w0RE90REw3hEqJJEkqhEeMNERPd4RMOSRKioRJLDRHj2RETlTUy5eUyikEyQokx5uUxN5kxNuXlNopBNkKJNeblNTOZ5TbmQTaKiTZC5TXnlTUzUVVWvelWdjVWNnVV6r1VV1VVVr3pVnY1VjZ1Veq9VVdV6Va+NVZ2dVY2vVXrUVVXDXl2me12Xil2Kl117pl1exF1epntel4peipdee6ZeXsR7XqaKXpeXXoqmXnvDXl2yZmacfGaRiGaIkWZ8nGZms2ZmnHxmkYhmiJFmfJxmZrN8ZpyIZpGRZoicZnyyZmahb26TfW6LhW6Fi259k25uom5uk31ui4VuhYtufZNub6J9b5OFb4uLb4WTb32hb26Qd3eJfneFgneChXd+iXd3kXd3iX53hYJ3goV3fol3d5B+d4mCd4WFd4KJd36Qd3d/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH9/gH/q5nzyAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,15 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#4DBFBF" width="4" height="13.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/hQD/yQDJ/wCF/wAA/wAA/4UA/8kAyf8Ahf8AAP+FAP/JAP//AMn/AIX/AAD/Cgr/hwr7xgrG+wqH/woK/woK/4cK+8YKxvsKh/8KCv+HCv/GCvv7Csb/Cof/Cgr/FBT/iBT0wxTD9BSI/xQU/xQU/4gU9MMUw/QUiP8UFP+IFP/DFPT0FMP/FIj/FBT/Hx//iR/twB/A7R+J/x8f/x8f/4kf7cAfwO0fif8fH/+JH//AH+3tH8D/H4n/Hx//KSn/iynmvCm85imL/ykp/ykp/4sp5rwpvOYpi/8pKf+LKf+8KebmKbz/KYv/KSn/MzP/jDPfuTO53zOM/zMz/zMz/4wz37kzud8zjP8zM/+MM/+5M9/fM7n/M4z/MzP/PT3/jT3Ytj222D2N/z09/z09/4092LY9ttg9jf89Pf+NPf+2PdjYPbb/PY3/PT3/R0f1jkfRs0ez0UeO9UdH/0dH9Y5H0bNHs9FHjvVHR/+OR/WzR9HRR7P1R47/R0f/UlLqkFLKsFKwylKQ6lJS/1JS6pBSyrBSsMpSkOpSUv+QUuqwUsrKUrDqUpD/UlL/XFzekVzDrFysw1yR3lxc/1xc3pFcw6xcrMNckd5cXP+RXN6sXMPDXKzeXJH/XFz/ZmbTkma8qWapvGaS02Zm/2Zm05JmvKlmqbxmktNmZv+SZtOpZry8ZqnTZpL/ZmbrcHDHlHC1pnCmtXCUx3Bw63Bwx5RwtaZwprVwlMdwcOuUcMemcLW1cKbHcJTrcHDWenq8lXquo3qjrnqVvHp61np6vJV6rqN6o656lbx6etaVeryjeq6ueqO8epXWenrChYWwloWnn4Wfp4WWsIWFwoWFsJaFp5+Fn6eFlrCFhcKWhbCfhaenhZ+whZbChYWtj4+lmI+gnI+coI+YpY+PrY+PpZiPoJyPnKCPmKWPj62Yj6Wcj6Cgj5ylj5itj4+ZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZlmyTkfAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,12 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#33807F" width="4" height="13.5" x="36" y="16.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AADZWQCshgCGrABZ2QAA/wAA2VkArIYAhqwAWdkAAP9ZANmGAKysAIbZAFn/AAD/BwfSWgenhAeEpwda0gcH/wcH0loHp4QHhKcHWtIHB/9aB9KEB6enB4TSB1r/Bwf/Dg7KWw6igg6Cog5byg4O/w4OylsOooIOgqIOW8oODv9bDsqCDqKiDoLKDlv/Dg7/FBTCWxSegBSAnhRbwhQU/xQUwlsUnoAUgJ4UW8IUFP9bFMKAFJ6eFIDCFFv/FBT8Gxu6XBuZfht+mRtcuhsb/BsbulwbmX4bfpkbXLobG/xcG7p+G5mZG366G1z8GxvuIiKzXSKVeyJ7lSJdsyIi7iIis10ilXsie5UiXbMiIu5dIrN7IpWVInuzIl3uIiLgKSmrXimQeSl5kCleqykp4Ckpq14pkHkpeZApXqspKeBeKat5KZCQKXmrKV7gKSnTMDCjXzCLdzB3izBfozAw0zAwo18wi3cwd4swX6MwMNNfMKN3MIuLMHejMF/TMDDFNjacYDaHdTZ1hzZgnDY2xTY2nGA2h3U2dYc2YJw2NsVgNpx1NoeHNnWcNmDFNja4PT2UYT2Ccz1zgj1hlD09uD09lGE9gnM9c4I9YZQ9PbhhPZRzPYKCPXOUPWG4PT2qRESMYkR9cURxfURijEREqkREjGJEfXFEcX1EYoxERKpiRIxxRH19RHGMRGKqREScS0uFYkt5b0tveUtihUtLnEtLhWJLeW9Lb3lLYoVLS5xiS4VvS3l5S2+FS2KcS0uPUlJ9Y1J0bFJsdFJjfVJSj1JSfWNSdGxSbHRSY31SUo9jUn1sUnR0Umx9UmOPUlKBWFh1ZFhvalhqb1hkdVhYgVhYdWRYb2pYam9YZHVYWIFkWHVqWG9vWGp1WGSBWFh0X19uZV9raF9oa19lbl9fdF9fbmVfa2hfaGtfZW5fX3RlX25oX2trX2huX2V0X19mZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmZmavW1W3AAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,18 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#59DFDF" width="4" height="10.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/mwD/6wDr/wCb/wAA/wAA/5sA/+sA6/8Am/8AAP+bAP/rAP//AOv/AJv/AAD/DAz/nQz/5wzn/wyd/wwM/wwM/50M/+cM5/8Mnf8MDP+dDP/nDP//DOf/DJ3/DAz/GBj/nxj/4xjj/xif/xgY/xgY/58Y/+MY4/8Yn/8YGP+fGP/jGP//GOP/GJ//GBj/JCT/oCT/4CTg/ySg/yQk/yQk/6Ak/+Ak4P8koP8kJP+gJP/gJP//JOD/JKD/JCT/MDD/ojD/3DDc/zCi/zAw/zAw/6Iw/9ww3P8wov8wMP+iMP/cMP//MNz/MKL/MDD/PDv/ozv/2DvY/zuj/zs8/zs8/6M8/9g82P88o/88O/+jPP/YPP//PNj/PKP/PDv/R0f/pUf81EfU/Eel/0dH/0dH/6VH/NRH1PxHpf9HR/+lR//UR/z8R9T/R6X/R0f/U1P/plP00VPR9FOm/1NT/1NT/6ZT9NFT0fRTpv9TU/+mU//RU/T0U9H/U6b/U1P/X1//qF/rzV/N61+o/19f/19f/6hf681fzetfqP9fX/+oX//NX+vrX83/X6j/X1//a2v/qWvjyWvJ42up/2tr/2tr/6lr48lryeNrqf9ra/+pa//Ja+Pja8n/a6n/a2v/d3f2q3fbxXfF23er9nd3/3d39qt328V3xdt3q/Z3d/+rd/bFd9vbd8X2d6v/d3f/g4PorIPTwoPC04Os6IOD/4OD6KyD08KDwtODrOiDg/+sg+jCg9PTg8Log6z/g4P6j4/bro/Lvo++y4+u24+P+o+P266Py76PvsuPrtuPj/quj9u+j8vLj77bj676j4/im5vNr5vDupu6w5uvzZub4pubza+bw7qbusObr82bm+Kvm826m8PDm7rNm6/im5vKp6fAsae7tqe2u6exwKenyqenwLGnu7antrunscCnp8qxp8C2p7u7p7bAp7HKp6eys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7Kys7I3sYbbAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,9 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#266060" width="4" height="10.5" x="36" y="19.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXlAACjQwCBZQBlgQBDowAA5gAAo0MAgWUAZYEAQ6MAAOZDAKNlAIGBAGWjAEPlAADbBQWdQwV9YwVjfQVDnQUF2wUFnUMFfWMFY30FQ50FBdtDBZ1jBX19BWOdBUPbBQXRCgqXRAp6YQphegpElwoK0QoKl0QKemEKYXoKRJcKCtFECpdhCnp6CmGXCkTRCgrHDw+SRQ92YA9gdg9Fkg8Pxw8PkkUPdmAPYHYPRZIPD8dFD5JgD3Z2D2CSD0XHDw+9FBSMRRRzXhRecxRFjBQUvRQUjEUUc14UXnMURYwUFL1FFIxeFHNzFF6MFEW9FBSyGhmGRhlvXRldbxlGhhkasxkahkYab10aXW8aRoYaGbNGGoZdGm9vGl2GGkayGhmoHx+ARx9sWx9bbB9HgB8fqB8fgEcfbFsfW2wfR4AfH6hHH4BbH2xsH1uAH0eoHx+eJCR7RyRoWSRZaCRHeyQkniQke0ckaFkkWWgkR3skJJ5HJHtZJGhoJFl7JEeeJCSUKSl1SCllWClYZSlIdSkplCkpdUgpZVgpWGUpSHUpKZRIKXVYKWVlKVh1KUiUKSmKLi5vSS5hVi5WYS5Jby4uii4ub0kuYVYuVmEuSW8uLopJLm9WLmFhLlZvLkmKLi5/MzNpSTNeVTNVXjNJaTMzgDMzaUkzXlUzVV4zSWkzM4BJM2lVM15eM1VpM0l/MzN1ODhkSjhaUzhTWjhKZDg4dTg4ZEo4WlM4U1o4SmQ4OHVKOGRTOFpaOFNkOEp1ODhrPT1eSz1XUT1RVz1LXj09az09Xks9V1E9UVc9S149PWtLPV5RPVdXPVFePUtrPT1hQkJYS0JTUEJQU0JLWEJCYUJCWEtCU1BCUFNCS1hCQmFLQlhQQlNTQlBYQkthQkJXR0dSTEdQTkdOUEdMUkdHV0dHUkxHUE5HTlBHTFJHR1dMR1JOR1BQR05SR0xXR0dMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxMTUxpRIJHAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,21 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#66FFFF" width="4" height="7.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/sgD//wD//wCy/wAA/wAA/7IA//8A//8Asv8AAP+yAP//AP//AP//ALL/AAD/Dg7/sw7//w7//w6z/w4O/w4O/7MO//8O//8Os/8ODv+zDv//Dv//Dv//DrP/Dg7/Gxv/tRv//xv//xu1/xsb/xsb/7Ub//8b//8btf8bG/+1G///G///G///G7X/Gxv/KSn/tyn//yn//ym3/ykp/ykp/7cp//8p//8pt/8pKf+3Kf//Kf//Kf//Kbf/KSn/Njb/uTb/+zb7/za5/zY2/zY2/7k2//s2+/82uf82Nv+5Nv/7Nv//Nvv/Nrn/Njb/RET/ukT/90T3/0S6/0RE/0RE/7pE//dE9/9Euv9ERP+6RP/3RP//RPf/RLr/RET/UlL/vFL/81Lz/1K8/1JS/1JS/7xS//NS8/9SvP9SUv+8Uv/zUv//UvP/Urz/UlL/X1//vl//7l/u/1++/19f/19f/75f/+5f7v9fvv9fX/++X//uX///X+7/X77/X1//bW3/wG3/6m3q/23A/21t/21t/8Bt/+pt6v9twP9tbf/Abf/qbf//ber/bcD/bW3/enr/wXr/5nrm/3rB/3p6/3p6/8F6/+Z65v96wf96ev/Bev/mev//eub/esH/enr/iIj/w4j74Yjh+4jD/4iI/4iI/8OI++GI4fuIw/+IiP/DiP/hiPv7iOH/iMP/iIj/lpb/xZbx3Zbd8ZbF/5aW/5aW/8WW8d2W3fGWxf+Wlv/Flv/dlvHxlt3/lsX/lpb/o6P6x6Po2aPZ6KPH+qOj/6Oj+sej6Nmj2eijx/qjo//Ho/rZo+joo9n6o8f/o6P/sbHryLHf1bHV37HI67Gx/7Gx68ix39Wx1d+xyOuxsf/IsevVsd/fsdXrscj/sbHnvr7byr7V0L7Q1b7K276+576+28q+1dC+0NW+ytu+vufKvtvQvtXVvtDbvsrnvr7MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyXWdYqAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,6 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#1A4040" width="4" height="7.5" x="36" y="22.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWZAABtLABWQwBDVgAsbQAAmQAAbSwAVkMAQ1YALG0AAJksAG1DAFZWAENtACyZAACSAwNpLQNUQgNCVAMtaQMDkgMDaS0DVEIDQlQDLWkDA5ItA2lCA1RUA0JpAy2SAwOLBwdlLQdRQQdBUQctZQcHiwcHZS0HUUEHQVEHLWUHB4stB2VBB1FRB0FlBy2LBweFCgphLgpPQApATwouYQoKhQoKYS4KT0AKQE8KLmEKCoUuCmFACk9PCkBhCi6FCgp+Dg5dLg5NPw4/TQ4uXQ4Ofg4OXS4OTT8OP00OLl0ODn4uDl0/Dk1NDj9dDi5+Dg53ERFZLxFKPhE+ShEvWRERdxERWS8RSj4RPkoRL1kREXcvEVk+EUpKET5ZES93ERFwFBRWLxRIPRQ9SBQvVhQUcBQUVi8USD0UPUgUL1YUFHAvFFY9FEhIFD1WFC9wFBRpGBhSLxhGPBg8RhgvUhgYaRgYUi8YRjwYPEYYL1IYGGkvGFI8GEZGGDxSGC9pGBhjGxtOMBtDOxs7QxswThsbYxsbTjAbQzsbO0MbME4bG2MwG047G0NDGztOGzBjGxtcHx9KMB9BOR85QR8wSh8fXB8fSjAfQTkfOUEfMEofH1wwH0o5H0FBHzlKHzBcHx9VIiJGMSI/OCI4PyIxRiIiVSIiRjEiPzgiOD8iMUYiIlUxIkY4Ij8/IjhGIjFVIiJOJSVCMSU8NyU3PCUxQiUlTiUlQjElPDclNzwlMUIlJU4xJUI3JTw8JTdCJTFOJSVHKSk/Mik6Nik2OikyPykpRykpPzIpOjYpNjopMj8pKUcyKT82KTo6KTY/KTJHKSlBLCw7Miw4NSw1OCwyOywsQSwsOzIsODUsNTgsMjssLEEyLDs1LDg4LDU7LDJBLCw6MDA3MzA1NDA0NTAzNzAwOjAwNzMwNTQwNDUwMzcwMDozMDc0MDU1MDQ3MDM6MDAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzOlhinEAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,24 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#73FFFF" width="4" height="4.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/yAD//wD//wDI/wAA/wAA/8gA//8A//8AyP8AAP/IAP//AP//AP//AMj/AAD/Dw//yg///w///w/K/w8P/w8P/8oP//8P//8Pyv8PD//KD///D///D///D8r/Dw//Hx//zB///x///x/M/x8f/x8f/8wf//8f//8fzP8fH//MH///H///H///H8z/Hx//Li7/zi7//y7//y7O/y4u/y4u/84u//8u//8uzv8uLv/OLv//Lv//Lv//Ls7/Li7/PT3/0D3//z3//z3Q/z09/z09/9A9//89//890P89Pf/QPf//Pf//Pf//PdD/PT3/TUz/0kz//0z//0zS/0xN/0xN/9JN//9N//9N0v9NTP/STf//Tf//Tf//TdL/TUz/XFz/1Fz//1z//1zU/1xc/1xc/9Rc//9c//9c1P9cXP/UXP//XP//XP//XNT/XFz/a2v/1mv//2v//2vW/2tr/2tr/9Zr//9r//9r1v9ra//Wa///a///a///a9b/a2v/enr/2Hr//3r//3rY/3p6/3p6/9h6//96//962P96ev/Yev//ev//ev//etj/enr/ior/2or//4r//4ra/4qK/4qK/9qK//+K//+K2v+Kiv/aiv//iv//iv//itr/ior/mZn/3Jn//pn+/5nc/5mZ/5mZ/9yZ//6Z/v+Z3P+Zmf/cmf/+mf//mf7/mdz/mZn/qKj/3qj/+aj5/6je/6io/6io/96o//mo+f+o3v+oqP/eqP/5qP//qPn/qN7/qKj/uLj/4Lj/9Lj0/7jg/7i4/7i4/+C4//S49P+44P+4uP/guP/0uP//uPT/uOD/uLj/x8f/4sf678fv+sfi/8fH/8fH/+LH+u/H7/rH4v/Hx//ix//vx/r6x+//x+L/x8f/1tb35Nbw6tbq8Nbk99bW/9bW9+TW8OrW6vDW5PfW1v/k1vfq1vDw1ur31uT/1tbl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uXl5uUf+w9xAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,3 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#0D2020" width="4" height="4.5" x="36" y="25.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVMAAA2FgArIgAiKwAWNgAATQAANhYAKyIAIisAFjYAAE0WADYiACsrACI2ABZMAABJAgI0FgIqIQIhKgIWNAICSQICNBYCKiECISoCFjQCAkkWAjQhAioqAiE0AhZJAgJGAwMyFwMpIAMgKQMXMgMDRgMDMhcDKSADICkDFzIDA0YXAzIgAykpAyAyAxdGAwNCBQUxFwUnIAUgJwUXMQUFQgUFMRcFJyAFICcFFzEFBUIXBTEgBScnBSAxBRdCBQU/BwcvFwcmHwcfJgcXLwcHPwcHLxcHJh8HHyYHFy8HBz8XBy8fByYmBx8vBxc/Bwc7CQgtFwglHwgfJQgXLQgJPAgJLRcJJR8JHyUJFy0JCDwXCS0fCSUlCR8tCRc7CQg4CgorGAokHgoeJAoYKwoKOAoKKxgKJB4KHiQKGCsKCjgYCiseCiQkCh4rChg4Cgo1DAwpGAwjHgweIwwYKQwMNQwMKRgMIx4MHiMMGCkMDDUYDCkeDCMjDB4pDBg1DAwxDg4nGA4iHQ4dIg4YJw4OMQ4OJxgOIh0OHSIOGCcODjEYDicdDiIiDh0nDhgxDg4uDw8lGA8gHQ8dIA8YJQ8PLg8PJRgPIB0PHSAPGCUPDy4YDyUdDyAgDx0lDxguDw8qEREjGBEfHBEcHxEYIxERKxERIxgRHxwRHB8RGCMRESsYESMcER8fERwjERgqEREnExMhGRMeHBMcHhMZIRMTJxMTIRkTHhwTHB4TGSETEycZEyEcEx4eExwhExknExMkFBQfGRQdGxQbHRQZHxQUJBQUHxkUHRsUGx0UGR8UFCQZFB8bFB0dFBsfFBkkFBQgFhYdGRYcGxYbHBYZHRYWIBYWHRkWHBsWGxwWGR0WFiAZFh0bFhwcFhsdFhkgFhYdGBgbGRgbGhgaGxgZGxgYHRgYGxkYGxoYGhsYGRsYGB0ZGBsaGBsbGBobGBkdGBgZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhkZGhnL2IjfAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,27 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#80FFFF" width="4" height="1.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AAD/3gD//wD//wDe/wAA/wAA/94A//8A//8A3v8AAP/eAP//AP//AP//AN7/AAD/ERH/4BH//xH//xHg/xER/xER/+AR//8R//8R4P8REf/gEf//Ef//Ef//EeD/ERH/IiL/4iL//yL//yLi/yIi/yIi/+Ii//8i//8i4v8iIv/iIv//Iv//Iv//IuL/IiL/MzP/5TP//zP//zPl/zMz/zMz/+Uz//8z//8z5f8zM//lM///M///M///M+X/MzP/RET/50T//0T//0Tn/0RE/0RE/+dE//9E//9E5/9ERP/nRP//RP//RP//ROf/RET/VVX/6VX//1X//1Xp/1VV/1VV/+lV//9V//9V6f9VVf/pVf//Vf//Vf//Ven/VVX/Zmb/62b//2b//2br/2Zm/2Zm/+tm//9m//9m6/9mZv/rZv//Zv//Zv//Zuv/Zmb/d3f/7Xf//3f//3ft/3d3/3d3/+13//93//937f93d//td///d///d///d+3/d3f/iIj/8Ij//4j//4jw/4iI/4iI//CI//+I//+I8P+IiP/wiP//iP//iP//iPD/iIj/mZn/8pn//5n//5ny/5mZ/5mZ//KZ//+Z//+Z8v+Zmf/ymf//mf//mf//mfL/mZn/qqr/9Kr//6r//6r0/6qq/6qq//Sq//+q//+q9P+qqv/0qv//qv//qv//qvT/qqr/u7v/9rv//7v//7v2/7u7/7u7//a7//+7//+79v+7u//2u///u///u///u/b/u7v/zMz/+Mz//8z//8z4/8zM/8zM//jM///M///M+P/MzP/4zP//zP//zP//zPj/zMz/3d3/+93//93//937/93d/93d//vd///d///d+//d3f/73f//3f//3f//3fv/3d3/7u7//e7//+7//+79/+7u/+7u//3u///u///u/f/u7v/97v//7v//7v//7v3/7u7///////////////////////////////////////////////////////////////9MohgsAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,0 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#000000" width="4" height="1.5" x="36" y="28.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzMPSIAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,30 h 5" class="b"/>
-</g>
-<text x="29.5" y="26" style="text-anchor:end;">H</text>
-<text x="29.5" y="29" style="text-anchor:end;" class="n">360</text>
-<text x="15" y="29" style="text-anchor:middle;" class="n">180</text>
-<text x="6" y="3" style="text-anchor:start;">S</text>
-<text x="0.5" y="3" style="text-anchor:start;" class="n">1</text>
-<text x="0.5" y="16" style="text-anchor:start;" class="n">0.5</text>
-<text x="0.5" y="29" style="text-anchor:start;" class="n">0</text>
-<text style="text-anchor:middle;" transform="translate(35,15) rotate(-90)">I</text>
-<text x="36" y="3" style="text-anchor:end;" class="n">1</text>
-<text x="36" y="29" style="text-anchor:end;" class="n">0</text>
-<text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">HSI</text>
-<path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
 </svg><ul><li><p><code>XYZ</code>, <code>xyY</code>, <code>LMS</code> and all 6 transparent variants</p></li><li><p><code>Lab</code>, <code>Luv</code>, <code>LCHab</code>, <code>LCHuv</code> and all 8 transparent variants</p></li></ul><svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
      id="svg_Lab" version="1.1"
@@ -1012,260 +631,6 @@
 <text x="36" y="3" style="text-anchor:end;" class="n">100</text>
 <text x="36" y="29" style="text-anchor:end;" class="n">0</text>
 <text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">Luv</text>
-<path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="svg_LCHab" version="1.1"
-     viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
-     stroke="none" style="display:inline; margin-left:2em; margin-bottom:1em">
-<defs>
-<filter id="filter_g_LCHab" filterUnits="userSpaceOnUse" x="0" y="-0.5" width="15.5" height="16">
-  <feGaussianBlur stdDeviation="0.1" result="blur"/>
-  <feMerge>
-    <feMergeNode in="SourceGraphic"/>
-    <feMergeNode in="blur"/>
-  </feMerge>
-</filter>
-<style type="text/css"><![CDATA[
-  #svg_LCHab g, #svg_LCHab image {
-    transition: all 400ms ease 200ms;
-  }
-  #svg_LCHab path.b {
-    stroke: currentColor;
-    stroke-width: 0.5;
-    opacity: 0;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHab image {
-    opacity: 0;
-    filter:url(#filter_g_LCHab);
-  }
-  #svg_LCHab rect:active ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHab rect:hover ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHab rect:active ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_LCHab rect:hover ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_LCHab text {
-    fill: currentColor;
-    fill-opacity: 0.8;
-    stroke: #aaa;
-    stroke-width: 0.2;
-    stroke-opacity: 0.4;
-    font-size: 3px;
-  }
-  #svg_LCHab text.n {
-    opacity:0;
-  }
-  #svg_LCHab:hover text.n {
-    opacity:1;
-  }
-  #svg_LCHab:active text.n {
-    opacity:1;
-  }
-]]></style>
-</defs>
-<g>
-  <rect fill="#008B76" width="4" height="30" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)" style="opacity:1;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AHv/ADnlLQC6XwCCegA0iQAAkQAAlVAAl5gAmNsAlP8Aif8Acf+cR/jkAL7/AHv5AHv3AD3fNwC3YQCDeQA9iAAAkAAAlFMAlpYAltQAkv8Ah/8Acf+bTO/dALn5AHvxAHrwAEHaPwC0YgCEeQBEhwAAjwgAk1YAlZQAlM0AkPgAhv8Acf+aUebXGbTxAHroAHroHEXURgaxZACFeQBLhgAAjhkAklgAk5IAk8YAju4AhP8AcfqYVd7QLbDoAHrgInrgL0nOTBauZgCFeQBRhQAAjCUAkFsAko8Akb8AjeMAg/Qccu+XWdXJOqvgInrYNHnYPE3IUiKrZwCFeABXhAAAiy4Aj10AkI0Aj7kAi9kAgek4cuSVXMzCRKbYNHnPQXnQRlHCVyuoaQKGeABcgwsViTcAjWAAjosAjbIAic8AgN1IctmTYMO8TKHPQXnGS3nIT1W7XDWkaxqFeA1ggSAsiD8Ai2MAjIgAi6sAh8UAf9FTcs6QY7u1U53GS3m9U3m/Vlm0YD2gbCmFeCJlgC47hkYAiWUAioYAiaUAhbsAfsZcc8OOZrKtWZi9U3m0Wni2XF2tZEacbjWEdzBofzlGhE0Eh2gAiIQAh54Ag7Effbpjc7iLaaqmX5O0WnirYHitYmGmZ06Xb0GDdz1sfkVQglUuhWoAhoIAhZcAgac+fK9odK2Ia6GfZI+rYHiiZnijZ2aea1aScUyCd0lvfE9ZgFxDg20tg4AkgpE0f55Qe6RtdKKFbpmXaIqiZniYa3iZa2qVbl6McleAd1Vxe1lhfmNTgG9HgX1EgIpNfZRdephwdZeCcJCQbIWYa3iNb3ePb26McWeGdGJ+d2BzemNpfGlgfXJafntZfYRee4pneY1zdox/c4iIcICNb3eCc3eDc3OCdG9/dWx7d2x1eG1weXBsenRpenlpen1reYFweIJ1doJ7dX+AdHyCc3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3de4EAPAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,15 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00A68F" width="4" height="13.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/AJX/AFD/TgDaeACgkwBUpAAArQsAsmkAtLMAtPcAr/8Aov8Aiv+6Y///INr/AJX/AJT/H1T/VQXXegChkwBbowAArB4AsWsAs7EAsvAArf8Aof8Aiv+5Z//8NtX/AJT/IpT/Nlj6XBnUfAChkwBiogAAqysAr24Asa4AsOkAq/8An/8Oiv+3a//1RND/IpT/OZT/RVz0YiXQfQCikgBooAAAqTUArnEAsKwAruIAqf8Anv86iv+1b/vuT8v/OZT/SJP/UGDuZzDNfwCikgBtnwAAqD4ArHQArqoArNsAp/8AnP9Pi/+zc/LnWMb/SJP2VJP4WmXnbDrJgRCikgBynhonpkcAqnYArKcAqtQApfYAm/9di/+xdungYML2VJPtXpPvYmngcUPGgiWikRh3nSw7pE8AqHkAqqUAqM0Ao+wAmvpoi/aueeDZZ73tXpPkZpPmaW3ZdUzBhDShkSx7nDpJolcApnsAqKMApscAoeEAme5xjOqsfNfRbrjkZpPbbZLdcHHSeVW9hUGhkTt/mkZWoV4ApH4ApaAApMAAn9cjl+J4jN+pf87Kc7PbbZLRdJLTdnbKfV64h02gkUmCmVJgn2Y0ooEAo54AobkAnc1HltZ+jdOmgsXCea7RdJLHepLKe3rCgWaziVmekVaFmF1qnW1LoIMpoJwQn7Ixm8NclcqDjcijhby6fanHepK9f5HAgH+6hG+uimSckWKIlmdymnRdnYZLnplFnKtSmblrlL+Hjr2gh7SzgqS9f5GzhJG1hYOxiHenjHCakW6LlXJ7mHtsmolhm5dfmqVnl693k7OKj7Kciquqhp+zhJGoiZGqiYini4ChjXuYkXmNk3yCloN5l4tzmJVyl553laSBkqiNj6eZjKKiipqoiZGdjZGejYycjoiZj4aUkYWPkoaKk4qFlI6DlJOClJeFk5uJkZyPkJyVjpmZjZWdjZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZEfFnqiAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,12 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00715D" width="4" height="13.5" x="36" y="16.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXgAGLdACTEAACaRwBlYQAAbwAAdgAAeTkAe38AfL8Aeu8AcP8AWv9/KtvFAKPgAGLYAGLWACe/DgCYSABmYQAYbgAAdQAAeDwAenwAe7gAeOUAb/oAWvR+MdK/AJ7YAGLRAGLPACu5HwCVSgBnYQAlbQAAdAAAdz4AeXoAebEAdtsAbe8AWuh9Nsq5AJnRAGLJAGHIAC+0KQCTTABoYAAvbAAAcwAAdkEAeHgAeKsAddEAbOMAWt18O8GyAJXJAGHBAGHAADKuMQCQTgBpYAA2awAAcgUAdUMAd3YAdqQAc8cAatcAWtJ7P7msE5DBAGG5AmG5GDapOAaNTwBqYAA8agAAcRQAdEYAdXQAdZ4Acb0AacwAWsd5Q7CmJYy5AmGxIGCxKDqjPROKUQBqXwBCaQAAbx4AckgAdHEAc5cAb7MAZ8EfWr13R6ifMIexIGCpLmCqMz6dQx2HUgBqXwBHaAABbicAcUsAcm8AcZEAbqoAZrUzWrJ2SqCZOYOpLmChOGCiPEKXRyaEVA5qXwNLZxQebC8Ab00AcG0Ab4oAbKAAZao/W6dzTZeSQH6hOGCYQGCaQ0aRSy+AVR5qXxhPZiIsazYAbVAAbmsAbYQAapYAZJ9IW5xxUI+LRnmYQGCQR1+RSUqKTzd8VyppXyZTZS04aT0Ia1IAbGkAa30AaI0bY5ROW5JvU4eES3WQR1+HTV+ITk6DUj93WDVoXjJWYzhBZ0QpaVQCamcAaXcKZoM1YolTXIhsVX99UHCHTV99Ul9/U1J7VkdyWkBmXj5YYkJJZUs6Z1ctZ2QpZnEyZHpEYX5XXH1pWHd2VGx9Ul90V191V1ZyWU9tW0pkXklbYUtRY1FIZFlCZWJAZGtFYnFPYHRaXXNmWm5uWGd0V19pW15qW1ppXFZmXVRiXlNdYFVYYVhUYVxRYmBRYWRTYGdXX2ldXmliXGZmW2NpW15eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl6RDXgcAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,18 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00C2AA" width="4" height="10.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/IK//PGj/bBr6kgC+rgBzvwAAyjEAz4IA0s8A0f8Ay/8Avf8Ao//Yfv//Tvf/IK//Pa//TWz/cin3lAC/rQB5vgAAyDwAzoUA0MwAz/8Ayf8Au/85pP/Xgv//WvL/Pa//T6//WnD/eDX0lgC/rQB/vQAAx0YAzIgAzsoAzf8Ax/8Auv9UpP/Vhv//ZO3/T6//XK7/ZXX/fT/wlwC/rQCEvAoYxU8AyooAzMcAy/8Axf8AuP9lpP/Siv//bej/XK7/aK7/bnn/gknsmR2/rACJuic3w1gAyY0AysUAyfgAw/8At/9zpf/Qjf//deP/aK7/ca7/dn3/h1PomzG/rCOOuThKwmAAx5AAyMIAxvEAwf8Atv99pf/NkP/+fN7/ca7/eq3/foL/i1zknEC/rDaSuEdZwGgAxJMAxsAAxOoAv/8AtP+Gpv/LlP32g9n/eq3/ga3/hIb4kGXfnk2+rEaWtlNlvnAAwpUAxL4AwuMAvf4ms/+Opv/Il/PuidP/ga35iK37i4vwlG7boFq9q1SatV9wvHg4wJgAwbsAv9wAuvRPsv+Up/zFmernjs75iK3vjq3xkI/ol3fVoWa8q2KdtGt6un9TvZsbvrkAvdUouOlnsfOZp/DCnOHfk8nvjq3klKznlZTfm3/Qo3K6q26gsnaEuIdmu55MvLdBus5Utt94sOeeqOS+n9jXmMTklKzamazcmpnWnojKpX64q3ujsYGMtY53uKBnubRit8dutNSGr9uiqNm7os/OnL/amazPnqzRn53NopHDpom1q4elr4uVs5WGtaN8trJ6tcCCssqRrs+lqc23pMbGoLrPnqzDo6zFo6LCpZq8qJSyq5OnrpacsJ2TsqaNsrCMsbmRsMCbrcOnqsKzpr29pLXDo6y4p6u5p6a3qKK0qaCvq5+praGkrqSfr6idr62drrKfrbWkrLepqravqbS0qLC4p6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6vBy1+CAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,9 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#005746" width="4" height="10.5" x="36" y="19.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXAAEu7ABGiAAB8LwBJSgAAVgAAWwAAXSMAX2YAYaMAYdIAWekAROFgAL6nAIjAAEu4AEu1ABSeAAB5MQBKSgAAVQAAWgAAXSUAX2QAYJ0AX8gAWN0ARNZgD7ahAIS4AEuxAEquABeZAAB3MwBLSQAAVAAAWgAAXCgAXmEAX5YAXb8AVtIAQ8xgGa6bAH+xAEqqAEqoABqUAAB1NQBMSQAGVAAAWQAAWyoAXV8AXpAAXLUAVMYAQ8FgIKWVAHuqAEqjAEmhAB2QEQBzNgBNSQAWUwAAWAAAWy0AXF0AXIoAWqsAU7sAQ7ZfJp2PAHajAEmbAEmaACGLHABwOABOSAAgUgAAVwAAWi8AW1sAW4MAWKIAUbAAQ6xeKpWJAHKbAEmUAEmTACSFJABuOgBPSAAoUQAAVgMAWDIAWlkAWX0AV5gAUKUAQ6FdLo2DDG6UAEmMCEmMFCiAKgVrOwBQSAAtUAAAVQ8AVzQAWFcAWHcAVY8AT5oAQ5dbMoV9HGmMCEmEHEiFISx6LxBoPQBQRwAyTwAAUxgAVjYAV1UAVnEAU4YATY8eQ4xaNn13JmWEHEh9J0h9Ki91MxllPgRQRwA3TggPUiAAVDkAVVMAVGsAUnwATIUsRIJYOXVxLWF9J0h1L0h2MTNvNyFhQBNQRw47TRYfUCcAUzsAU1EAUmQAUHMAS3o0RHhWO21qM1x1L0hsNUdtNjdoOyldQR9PRxw+TCEpTy0JUT0AUU8AUF4ATmoWSnA7RG5TPmZkOFhsNUdkO0dlOzthPjBZQilORydBSisyTTQiT0AQT00GTlgVTGErSWU/RWRQQF5dPVRkO0dbP0dcQD9ZQThURDNMRzJDSTU6SzoxTEIqTUsoTFItSlg3SFtDRVpNQ1ZWQE9bP0dRQ0dSQ0NRRD9ORT1KRzxFSD5ASUA8SkQ6Skk6SU08SU9AR1FFRlBKRU5OREtRQ0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0d7GuftAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,21 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#15DEC5" width="4" height="7.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/VMv/Y4H/iTn/rQDdyQCR2wAA500A7ZwA8OsA7v8A5/8A2P9Xvv/3mv//cP//VMv/ZMr/b4X/jkT/rwDeyACW2gAA5VcA658A7ugA7P8A5f8A1v9svv/1nv//ev//ZMr/ccr/eor/lE//sAreyACc2R0u5GAA6qIA7OYA6v8A4/8A1f98v//yof//g///ccr/fMr/g47/mVn/sireyA2h2DRH4mkA6KUA6uMA6P8A4f8A1P+Jv//wpf//i///fMr/hsn/i5P/nmL/tD3dxy6l1kVa4HIA5qgA5+EA5f8A3/8A0v+TwP/tqP//kv//hsn/jsn/k5f/omz/tkzdx0Gq1VRp3noA46oA5d4A4/8A3f8A0f+cwP/rq///mPr/jsn/lsn/mpz/p3X/t1rcx1Ku1GF13IIA4a0A49wA4f8A2/8o0P+kwP/or///nvX/lsn/ncj/oKH/q37+uWfbx2Cy0m2B2oo737AA4NkA3v8A2P9Yz/+rwf/lsv//pPD/ncj/pMj/pqX/r4f4u3Tax2610XmM2JJa3LMA3dcA3PgK1v9yzf+wwv/htP//qev/pMj/qsj/q6r/spDzvIDYx3u4z4WV1plw2rZK29U32fFU1P+FzP+1wv/et/78rub/qsj/r8j/sa/9tpntvozWxoi7zpCe06GC17hq2NJj1up00vuVy/+5w//buvXzs+D/r8j3tMf5tbPzuqLmwJjUxpW+zJun0aiS1LuC1dB/0+OK0PGiyve9w/XXvevrt9v3tMfrucfuurjpvavfwaPRxqHAy6avz7Cg0b6W0c2V0NydzeatyevAxOrTv+Liu9brucffvsfhvr3fwLTYw6/Oxq7DybG3zLeuzcGozsunzdSsy9u2yN/Dxd7PwtnZv9HfvsfTwsfUwsLTw73PxbvKxrrFyLy/yb+6ysS4ysm4ys26ydG/x9PFxtLLxNDQw8zTwsfGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsaY5tZoAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,6 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#003E2F" width="4" height="7.5" x="36" y="22.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWfADWaAAGCAABeFwAvNAAAPgAAQgAAQw0ARU4ASIgASbYARMwAMcVAAKKJAG6fADWYADSUAAB+AABcGgAwMwAAPQAAQQAAQxAARUwAR4IAR6wAQsAAMLpCAJqDAGqYADSSADSOAAB5AABaHAAxMwAAPAAAQQAAQxIAREoARnwARaMAQLUAL69DAJJ+AGaSADSLADSIAAF1AABYHgAyMwAAPAAAQAAAQhUAQ0gARHYARJkAPqoAL6VDAIp5AGGLADSEADOCAAdxAABWIAAzMgAAOwAAPwAAQRgAQkYAQ3AAQpAAPaAALptDB4NzAF2EADN9ADN8AAxsAABUIgA0MgAAOgAAPgAAQBoAQUQAQmoAQYcAO5UALpBDEHtuAFl9ADN3ADN1ABBoBABRJAA1MgAIOgAAPQAAPxwAQEIAQWQAP34AOooALoZDFnNoAFV3ADNwADJvABRjDwBPJQA2MgATOQAAPAAAPh8AP0AAP14APnUAOIAALnxCG2tiAFFwADJpADJoABdfFwBNJwA3MQAaOAAAOwAAPSEAPj4APlgAPGwAN3UALnJBH2RdB01pADJiCTJiDxtZHABLKAA4MQAhNwAAOgkAPCMAPTwAPVIAOmMANmsGLmk/IlxXFEliCTJaFjFbGR5UIQtIKgA4MQAkNgADOREAOyUAOzoAO0wAOVoANWEZLl89JVVRHEVaFjFTHjFTICJOJRREKwg3MQQnNQwSOBgAOSgAOjgAOUcAN1IANFciLlU7KE1LIkFTHjFLJDFMJSVIKBtBLBQ2MBIqNBYcNh8INyoAODYAN0EANkkQM00oL0w5KkZFJjxLJDFDKTFEKSlBKyI8Lh41MB0tMx8kNCUbNSwTNjQQNTsVNEEgMkMsL0M3LD8+KjhDKTE6LTA7LS06Lik3LyczMCcvMSgqMiomMy4kMzIkMzYmMjkqMTovMDo0Ljg4LTQ6LTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDBN+u7hAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,24 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#4CFCE1" width="4" height="4.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/euf/hZv/plT/yAD95ACv+AIV/2kA/7cA//8A//8A//8A9P+E2f//tv//kP//euf/hub/j5//q1//yh395AC09y1A/3IA/7oA//8A//8A//8A8v+T2v//uv//mf//hub/keb/mKT/sGn/zDb95By59UJY/3sA/70A//8A//8A//8A8f+g2v//vf//of//keb/mub/oKn/tXP/zkn85Dm+9FJq/4QA/8AA//8A//8A/v8A8P+q2///wf//qP//mub/o+X/qK3/unz/z1j8403C82F5/YwA/8MA//0A//8A+/8A7v+z2///xP//r///o+X/q+X/r7L/vob/0Wf7413G8W+G+5QA/8YA//sA//8A+f8q7f+73P//x///tf//q+X/s+X/trf/wo//03T642zK8HuS+Z0+/skA//gA/v8A9/9f7P/C3P//yv//u///s+X/ueT/vLz/xpn/1YH543vO7oid96Vg/MsA/fYA+/8A9f986//I3f//zf//wP//ueT/wOT/wsD/yqL/1o7344jR7ZOn9ax4+c5E+vMc+P9Q8/+S6v/N3f/+0P//xf//wOT/xuT/x8X/zqv/2Jr14pbU7J+x8rSM9tFs9/Fg9f938P+j6P/S3v/70///yv//xuT/y+T/zMr/0rT/2qbz4qPX6qu68Lye89SI9O6C8/+S7v+x5//W3//31v//z/3/y+T/0OP/0c//1b7/27Lx4rDa6bbD7cSt8Nee8eyb8P+n7P++5v/Z3//z2P//0/j/0OP/1eP/1tT/2cf83b/u4rzc58HL68u87dqy7uqx7Pi56v/I5f/c4P/v2///1/L/1eP82uP+2tn73ND038rq4snf5czT6NPJ6t3D6ufD6fHI5/jS5Pvf4frr3vX22+382uPw3uPx3t3v39ns4dbn4tbh5Nfb5dvW5t/T5uXT5urW5e3b4+/h4u7n4Ozs3+jw3uPi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLcycNLAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,3 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00281B" width="4" height="4.5" x="36" y="25.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEV/ACB5AARjAABCAAAXHwAAKAAAKAAAKAAAKjcALm8ANJoAMa8AIagYAIdrAFV/ACB5ACBzAANfAABAAgAYHgAAKAAAKAAAKAAAKTUALWkAMpEAL6QAH54eAIBmAFF5ACBzAB9uAAJbAAA+BQAZHgAAKAAAKAAAKAAAKTMALWMAMYgALZoAHpQhAHhhAE1zAB9sAB9oAAFXAAA8BwAaHgAAJwAAKAAAKAAAKTEALF0AL38AK48AHYokAHBcAElsAB9mAB9jAABTAAA6CgAbHgAAJgAAKAAAKAAAKS8ALFcALnYAKYUAHIAmAGlXAEVmAB9gAB5dAABPAAA5DQAcHQAAJQAAKAAAKAEAKS4AK1EALG0AJ3oAG3YnAGFSAEFgAB5aAB5YAABLAAA3DwAcHQAAJAAAKAAAKAQAKSwAK0wAKmQAJXAAG2woAFpNAD5aAB5UAB1SAABHAAA1EQAdHQAAJAAAKAAAKAcAKSoAKkYAKFwAJGYAGmMoAlNIADpUAB1NAB1NAABCAAAzEgAeHQAAIwAAJwAAKAsAKSgAKUAAJ1MAIlwAGlkoCEtDADZNAB1HAB1HAAA+BQAxFAAfHAADIgAAJQAAJw4AKCYAJzsAJUsAIVIAGlAnDEQ+ADJHAB1BAB1BAAU6CwAuFQAgHAAMIQAAJAAAJhEAJiQAJTYAI0MAIEkAGkcmED05Ay5BAB06Bhw7CQs2DwAsFgAhHAASIAAAIgAAJBMAJCIAJDAAIjsAH0AHGj4lEzYzCyo6BhwzDxw0EBAxEwEqGAAhHAAYHgAHIQcAIhUAIiEAIisAIDMAHjYRGjUjFjAuESczDxwsFBwtFRUrFg0mGQYgGwQZHggQHxAFIBcAIB8AICYAHysJHS0XGi0hGCkoFSMsFBwkGBwlGBgkGRUhGhMeGxIaHRMWHRYSHhkPHh0PHiERHSMVHCQaGyQeGiIiGR8kGBwbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxtAS9ZAAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,27 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#71FFFD" width="4" height="1.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/m///pbb/w2//5Sz//wDN/ztT/4QA/9MA//8A//8A//8A//+r9v//0///r///m///pv//rrr/yHn/5kP//yrS/09p/40A/9YA//8A//8A//8A//+39v//1v//t///pv//sP//tr//zYP/6FX//0TX/2B6/5YA/9kA//8A//8A//8A///B9///2v//vv//sP//uf//vsT/0o3/6mX//1jb/2+J/58A/9wA//8A//8A//8A///L9///3f//xf//uf//wf//xcn/1pf/7HT//2nf/32X/6cA/98A//8A//8A//8r///T+P//4f//zP//wf//yP//zM7/26H/7YL//3nj/4qj/7BA/+IA//8A//8A//9n///a+P//5P//0v//yP//z///09L/36r/74///4jn/5av/7hm/+UA//8A//8A//+G///g+f//5///1///z///1v//2df/47T/8Zz//5br/6O5/8CB/+g3//8A//9H//+e///m+f//6v//3f//1v//3P//3tz/573/86n//6Pu/6/D/8iW/+tr//9Y//94//+x///q+v//7f//4v//3P//4v//5OH/6sf/9LX//7Hx/7rN/9Cp/+2M//+C//+X///B///v+///8P//5v//4v//6P//6eb/7tD/9sL//770/8bW/9i6//Cl//+g//+w///O///z+///8v//6///6P//7f//7uv/8tn/+M7//8v3/9Lf/+DJ//O7//+4///E///a///2/P//9f//7///7f//8v//8vD/9eP/+tr//9j5/93n/+jY//bO///N///V///l///5/f//+P//9P//8v//9v//9/X/+ez/++f//+X7/+jv/+/m//ng///f///k///u///7/f//+v//+P//9v//+///+/r//Pb//fP///L9//T3//fz//zw///w///y///3///9/v///f//+///+/////////////////////////////////////////////////////////////////8Gtej9AAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,0 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#000000" width="4" height="1.5" x="36" y="28.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVhAAdaAAZGAAMrAAEAAAAAAAAAAAAAAAAAAiIADFYAF4AAHJQACo0AAG1QAD5hAAdbAAZVAAVDAAMqAAEAAAAAAAAAAAAAAAAAAiEAClAAFHcAGYkAB4MAAGZLADpbAAZWAAVQAAU/AAMoAAEAAAAAAAAAAAAAAAAAAh8ACUsAEm4AF38ABHkAAF5HADZWAAVRAAVLAAQ8AAMmAAEAAAAAAAAAAAAAAAAAAh0ACEUAEGUAFHUAAXACAFdDADJRAAVLAARGAAQ5AAIkAAEAAAAAAAAAAAAAAAAAARwAB0AADl0AEWsAAGYKAFA/AC9LAARGAANCAAM1AAIiAAEAAAAAAAAAAAAAAAAAARoABjoADFQAD2EAAF0PAEk6ACtGAANBAAM9AAMyAAIgAAEAAAAAAAAAAAAAAAAAARgABTUACUwADFcAAFMTAEI2AChBAAM8AAM4AAIvAAIeAAEAAAAAAAAAAAAAAAAAARYABDAAB0QACk4AAEoVADsyACQ8AAM3AAI0AAIsAAEcAAEAAAAAAAAAAAAAAAAAARQAAysABjwACEQAAEIXADUuACE3AAIyAAIvAAIoAAEZAAEAAAAAAAAAAAAAAAAAARIAAiYABDQABjsAADkXAC4qAB4yAAItAAErAAEkAAEWAAAAAAAAAAAAAAAAAAAAARAAAiEAAy0ABDIAADAWACgmABotAAEoAAEmAAEgAAETAAAAAAAAAAAAAAAAAAAAAQ0AAhwAAiUAAyoAACgUACEhABcoAAEiAAEgAAEaAAEPAAAAAAAAAAAAAAAAAAAAAAoAARcAAh4AAiEAACARABscABIiAAEaAAEZAAEUAAALAAAAAAAAAAAAAAAAAAAAAAcAAREAARcAARkAABkMABUVAA0aAAEQAAAPAAAMAAAFAAAAAAAAAAAAAAAAAAAAAAMAAAoAAQ4AAQ8AAA8GAAwNAAcQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEp9XMAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,30 h 5" class="b"/>
-</g>
-<text x="29.5" y="26" style="text-anchor:end;">H</text>
-<text x="29.5" y="29" style="text-anchor:end;" class="n">360</text>
-<text x="15" y="29" style="text-anchor:middle;" class="n">180</text>
-<text x="6" y="3" style="text-anchor:start;">C*</text>
-<text x="0.5" y="3" style="text-anchor:start;" class="n">100</text>
-<text x="0.5" y="16" style="text-anchor:start;" class="n">50</text>
-<text x="0.5" y="29" style="text-anchor:start;" class="n">0</text>
-<text style="text-anchor:middle;" transform="translate(35,15) rotate(-90)">L*</text>
-<text x="36" y="3" style="text-anchor:end;" class="n">100</text>
-<text x="36" y="29" style="text-anchor:end;" class="n">0</text>
-<text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">LCHab</text>
-<path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink"
-     id="svg_LCHuv" version="1.1"
-     viewBox="0 0 40 30" width="27.09mm" height="20.32mm"
-     stroke="none" style="display:inline; margin-left:2em; margin-bottom:1em">
-<defs>
-<filter id="filter_g_LCHuv" filterUnits="userSpaceOnUse" x="0" y="-0.5" width="15.5" height="16">
-  <feGaussianBlur stdDeviation="0.1" result="blur"/>
-  <feMerge>
-    <feMergeNode in="SourceGraphic"/>
-    <feMergeNode in="blur"/>
-  </feMerge>
-</filter>
-<style type="text/css"><![CDATA[
-  #svg_LCHuv g, #svg_LCHuv image {
-    transition: all 400ms ease 200ms;
-  }
-  #svg_LCHuv path.b {
-    stroke: currentColor;
-    stroke-width: 0.5;
-    opacity: 0;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHuv image {
-    opacity: 0;
-    filter:url(#filter_g_LCHuv);
-  }
-  #svg_LCHuv rect:active ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHuv rect:hover ~ image {
-    opacity: 1;
-    transition: all 200ms ease 0ms;
-  }
-  #svg_LCHuv rect:active ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_LCHuv rect:hover ~ path.b {
-    opacity: 0.8;
-  }
-  #svg_LCHuv text {
-    fill: currentColor;
-    fill-opacity: 0.8;
-    stroke: #aaa;
-    stroke-width: 0.2;
-    stroke-opacity: 0.4;
-    font-size: 3px;
-  }
-  #svg_LCHuv text.n {
-    opacity:0;
-  }
-  #svg_LCHuv:hover text.n {
-    opacity:1;
-  }
-  #svg_LCHuv:active text.n {
-    opacity:1;
-  }
-]]></style>
-</defs>
-<g>
-  <rect fill="#00897D" width="4" height="30" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)" style="opacity:1;" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXTP2rFVRusaACKdwBdgwAAjQAAlCUAmGoAmJgAkr0Ag9hgauOpStvLLcHWK5vTP2rORWvBVyiqaQCKdwBhgwAIiwAAki4AlmsAlpYAkLkAgtJibNylT9TGOLzRNpjORWvJSmy+WjKpaQCLdwBkggAligAAkTYAlGwAlJQAjrQAgctlbdShVM3AQbfMPpbJSmzFTm26XDqoagCLdwBogQAyiQAAjz0Ak20AkpIAjLAAgMVnbs2eWce7SLLGRZTFTm3AU262X0GlawCLdwBrgAA6iAAAjkMAkW4AkJAAi6sAf79pb8aaXcC1T67ATJHAU266V26yYUeibAWMdgBufwBBhw8AjEkAj24Ajo4AiacAf7hqcL+WYLqwVKm7UY+6V261W2+tY02fbSSKdgBvfwBIhScAik8AjW8AjIsAh6IlfrJscbiTY7OqWaS1Voy1W2+wXnCpZlObbjSJdxVwfhdOhDUHiFQAinAAiYkAhZ44faxucrGQZqylXp+vW4qwXnCqYnGkaFiYb0CHdy5wfS5Ug0Eqh1kAiHEAh4cAg5lGfKVvcqqMaaafYpqpX4iqYnGkZXKfal2UcEqFdz1xfT5ZgUo7hV0VhnIAhYUpgZVQe59wc6OJa6CaZZWiY4WkZXKdaHOZbGKQcVODd0pyfEpegFNJg2I1hHMwg4NAgJBZeplydJyGbpmUaZCcZ4OdaHOXbHSTbmaMcluBd1Rze1RkfltUgGZIgXRGgIBPfotgepJzdZWDcJKPbIuVa4GXbHSQbnSNcGuHc2J/d150el5pfWNefmtXf3RWfn5cfIZneYx0dY6AcoyJb4aObn6QbnSIcXWGc2+CdWp8d2d1eWdte2pnfG9jfHVifHxmeoFteIV1doZ9dIWDcoGHcXyIcXWAdHZ/dXN9dnB6d292eG9yeXBveXNtenZteXlveXxyeH52dn96dX59dHx/dHmAdHZ3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3dKTVDiAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,15 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00A396" width="4" height="13.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEXwXoTjb0PLgQCokAB8nQA5pwAArkgAs4QAsrIAq9cAnPF8hfzBavTlVdryUbTwXoTrYoXfckvKggCpkACAnABBpgAArU4AsYUAsLAAqdMAm+t+hvW9bu3fXNbtWLLrYoXmZobbdFLHgwCpkACDnABJpQAAq1QAr4YArq4AqM4Am+WAh+66cufaYtHnXq/mZobhaobXdljEhAeqkACGmwBQoxUAqloArYYArKwApsoAmt6CiOa2deDUZ8zhZK3haobcbofSeV7BhSmokACHmgBXoi4AqGAAq4cAqqkApMUpmdiDid+zeNrPbMfcaavcbofWcojOe2O9hjumkAeImQ1doT0ApmUAqYgAqKcAosE/mNKFitmve9PKccLWbajWcojRdYnJfWm6h0ilkC2ImS5joEklpGoAp4kApaUAoLxOl8yGi9Ksfs3Edb3QcqbRdYnLeYrEf262iFOjkECJmEFpnlQ8om4ApIoAo6MNnrhalsWIjMupgca/ebnKdqTLeYrFfIu/gnOziV2hkE6Kl09unV1MoXMloosPoaE5nbNklb+JjMSmg8C5fLTDeqHFfIu+f4y5hHevimWfkFqLlltzm2ZZn3hCoIw8n59Pm65tlbmKjb2jhbm0gK+9fp++f4y4goy0hnyqi26dkGWMlWV4mm5lnHxWnYxSnJxfmal0lLKLjrafh7Oug6q2gZ24goyxhY2tiICmjHWbkG+NlW99mHVvmoBlm41jmppsl6V7k6yNjq6ciayohqWvhZqxhY2piI6nioShjXyYkHiOlHiCln14mIRymY5xmJh3lqCBk6WOj6eZi6WjiaCoiJipiI6ii4+gjImcjoOWkIGPk4GHlIOBlol9lo99lZWAlJuHkp+Pj6CWjZ+djJuhi5Wii4+ZjpCZjo2Wj4qTkImQkomMk4qJk42Hk5CHk5OJkpaMkZiQkJiTj5iXjpaZjpOZjpCRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZGRkZHOnKETAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,12 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#007164" width="4" height="13.5" x="36" y="16.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEW2GlGnOwCNUABsXwA+agAAcwAAegAAf1EAgH8Ae6UAbMJBT8+UHca0AKq8AIK2GlGyI1KkPQCMUQBtXwBCagAAcgAAeAAAfVIAfn0AeaEAa7tFUcaPKr6uAKW3AICyI1KtK1OhQACKUQBtXwBGaQAAcQAAdw0Ae1MAfHsAd5wAarRIU76LM7eoD6CxEH6tK1OpMVSeQxOJUgBuXgBJaAAAcAAAdhsAeVQAeXkAdZgAaK1LVLaHObCjIpusIHupMVSkN1WaRSCIUwBuXgBNaAANbwAAdCUAd1UAd3cAc5MAZ6dOVa+DP6mdLZamK3mkN1WfO1WWSCmGVABuXgBQZwAibgAAcywAdlYAdXUAcY4AZqBQVqd/RKKYNZGhM3efO1WaQFaSSjGEVABvXgBUZgArbAAAcTMAdFYAc3MAb4oAZZpSWKB7SJuSPIybOnSaQFaVRFeOTDiBVQNvXgBXZQAyawoAbzkAclcAcXEAbYUAZJNUWZl4TJSNQoeVQHKVRFeQSFiKTz5+Vh5uXgBYZAA5aiAAbj8Ab1gAb28Aa4EgZI1WWZJ0T46HR4KPRW+QSFiKTFmFUUN7Vy1sXhpZZBs/aC4VbEQAbVkAbGwAaXwxY4dXWotxUoeBS32JSW2KTFmET1qAU0h3WTdqXixZYy1FZzgrakkAa1oAamoYZ3c9YoBZW4NuVIF8T3iDTWuET1p+Ult6VU1zWkFoXjlaYjlKZUE5aE0paVslaGgxZXNGYXpaXHxrV3p2U3N8UWh+Ult3Vlx0WFJuW0lmXkRbYURPZElEZlI7Zlw6ZmVBY25NYHNbXHVnWXNwVm52VWZ3VlxvWV1uWlZpXFFkXk1cYE5UYlFOY1ZJZF1JY2NMYmlUYGxcXW5kW2xrWWluWGNvWV1nW11mXFpkXVhhXlZdX1ZZYFhWYVpUYV1UYWFWYGRZX2VdXmZhXWVkXGRnW2FnW11eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5eXl5KgezNAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,18 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#39BEB1" width="4" height="10.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/ep7/imPqmwDIqwCcuABZwgAAymYAzp4Azc0AxvIAt/+YoP/aiP//dfX/cc//ep7/fp/9jGnnnArIqgCftwBgwRsAyGwAzJ8Ay8sAxO4Atv+aof/Xi//6e/D/d8z/fp//gqD4j2/knS/HqgCgtgBnwDUAx3EAyqAAycgAwukttf+bov/Ujv/1gOv/fMr/gqD+hqH0kXXhnkLFqgCgtgBtv0UAxXYAyKEAx8YAwOVGtPmdo//QkfvvhOf+gMj+hqH5iqLvk3rdn1DDqiqhtSxzvVIbw3sAxqIAxMQAvuBXs/OepPrNlPTqieL4hcX5iqLzjaPqlX/aoFzCq0GitEJ5vF47wYAAxKMAwsIAvNxksu2gpfPKl+7ljd3yicPzjaPtkKTlmITWoWbAq1Kjs1N+umhPv4UAwaMAwMAou9dvseehpezGmeffkNjrjcHtkKTnlKTgmonSonC+q2Cks2CEuXFevYk0v6Qhvr5KudJ5seCipubDnOHalNPlkb7nlKThl6XbnI7Oo3m8q2yksmyJt3lru45QvaVIvLtet86BsNqkp9/AntrUl87flbzhl6XamqbVnpLKpIG6q3elsXeOtoF2uZJjuqZfublvtcmJr9SlqNe9oNTOm8rYmbramqbTnafPoJbFpYm4q4GmsIGTtImBt5dzuKdxt7d8tMSQrs2mqNC6os3JnsXRnLfTnafMoKjJo5vBppC1q4qnr4qYs5CKtZuBtqiAtbSHsr+Wrsenqcm3pMfDocDKn7XMoKjEo6nCpZ+8qJezq5OorpOdsZeTs5+Ns6mMsrKSsLqcrcCoqcK0psC9o7vDorLEo6m8pqm7p6O3qZ6wq5uprZuir56bsKOYsKmXsLCbrrWhrLmpqrqxqLm3prW7pbC8pqm0qKqzqaexqqWuq6OqrKOmraWjrqeirqqira2jrbCmrLKqq7OuqbKxqbCzqK20qKqrq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6urq6vulTcVAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,9 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#00594D" width="4" height="10.5" x="36" y="19.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWaADiIIABvOQBQSAAcUgAAWgAAYAAAYToAYmkAZJEAWLMRMMSFALmiAJikAG2aADiWADmGIwBuOgBRRwAhUgAAWgAAYAAAYToAYmcAY4wAVqoeNLl/ALCbAJKfAGqWADmSADqEJgBtOgBRRwAmUQAAWQAAXgAAYTsAYmQAYYcAVKInN695AKeUAIyZAGeSADqOBjuCKQBsOwBRRwAqUQAAWAAAXQAAYTwAYmIAX4IAU5otOaV0Ap6OAIaUAGWOBjuKFDx/LABrPABSRwAuUAAAVwAAXAAAXz0AYGAAXH0AUZMxO5xvGJaIAIGOAGKKFDyGHT18LgBpPABSRwAyTwAAVgAAWgMAXj4AXl4AWngAUIw1PZRrIo6CAnuJBGCGHT2BIz54MQxoPQBTRwA2TwAAVAAAWRIAXD8AXFwAWHMAT4U4P4xmKoZ8F3aDFl2BIz58KT90NBlnPgBTRwA6TgAOUwAAVxwAWj8AWloAVm8ATn46QIRiMH92InF+IVt8KT93LkBwNiFlPwBTRwA+TQAcUgAAViMAWEAAV1cAVGoATHc9QXxeNHhxKmt4KFh3LkByMkFsOShiQAJURgBBTAAkUQYAVCoAVkEAVVUAUmUAS3A/QnVbOHFrMGZyL1ZyMkFsNkJnOy9fQRlSRgJCSwMrTxoAUi8AVEIAU1MAUGAbS2pAQ21XO2plNmFsNFNsNkJmOkNiPTRbQiZQRhxDSxwxTiYaUDQAUUMAUVADTlsqSmNCRGZUPmNfOlxlOFFmOkNfPURcQDlXQzBORipESio3TDApTjkdT0QaTk4kTFY0SVxDRV5QQVxZPldePU5fPURYQUVWQj5SRDhMRzVFSTU8Szg1TD4vTEUuTEwzSlE7SFVERVdNQ1VTQVJXQExYQUVQREZPREJNRUBJRz5GSD5CSUA+SUI8SkY8SUk+SExBR05GRk9KRU5NRExPRElQREZHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dCmE+IAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,21 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#61D9CC" width="4" height="7.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/l7r/poH/tjTmxgC50wB33jsA5oMA6roA6egA4f8w0v+0vP/1pf//lP//j+r/l7r/m7v/qIb/t0nlxgC60wB93U0A5YgA6LsA5+YA3/9M0f+2vf/yqP//mf//lOj/m7v/nrv/qoz/uFjjxiO70iaD3FsA440A5rsA5OQA3f9f0P+3vv/vq///nf//meb/nrv/orz/rJH+uWXhxkG70UOJ2mc34ZIA5LwA4uIA2/9uz/+5v//rrv//of//neP/orz/pb3/r5b6unDfxlW80FaP2XJP35cA4r0A4OAA2vx6zv+6v//osP//pf7/oeH/pb3/qb7/sZv2u3rdxmW90GWU2Hxh3ZwC374A3t082PeFzf+7wP/ls///qfn/pd7/qb7/rL//s6DzvITcxnK+z3Ka1oVw26BD3b8x29ta1vOOzf+9wf/itf/7rPT/qdz/rL//r8D9taTvvY3axn6/zn6f1Y192aVe28BV2dlu1O6WzPy+wv/et/31sO//rdr/r8D9ssH3t6nqvpXXxonAzYmk05WI16ly2MBt19d/0umey/a/wvrbufbws+r7sdf9ssH2tcHxua3mv53VxpPBzJOp0Z2T1a6C1sF/1dSN0eWlyu/Aw/PYvPDqtuX0tNX2tcHvuMLrvLLhwaTTxpzBy52u0KSc07KQ08KO0tKZz+CsyunBw+zVvunkueDtt9LvuMLou8PkvrbcwqvRxqXCyqazzqym0Lad0cOc0NCkzduyyeLCxOXSv+LevNvmu9Dou8PgvsTdwLrXw7LOxq7Dya64zLOuzrqozsSozs2ty9a3yNvDxd3PwdvZv9bevs7gvsTYwcXWwr7SxLnMxrbEyLa9yrm3y76zzMWzy8u2ytG9yNTExdbMw9TTwdHXwcvYwcXPxMbPxMLMxcDJxr/Fx77CyMC/ycK9ycW9ycm/yMzCx83Fxs7Jxc3NxMzPxMnPxMbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsYeDhHHAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,6 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#004437" width="4" height="7.5" x="36" y="22.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEWBAB9rAABTIwA2MgAAOwAAQwAAQwAARCMARVUASIYATcEAAPSVANqhAJaSAFuBAB99ACBpAQBSJAA2MQAAOwAAQgAAQwAARCMARVMASH8ASbAAANSFAMGWAIyMAFh9ACB6ACJnBgBRJAA2MQAAOgAAQQAAQwAARCQARVAAR3kARaIAALx4AK6MAIOGAFV6ACJ2ACNlCwBQJQA3MQACOgAAQQAAQwAARCUARU4AR3MAQpUAEKpuAJ6DAHuBAFJ2ACNyACRjEABPJQA3MQAKOQAAQAAAQwAARCYARUwAR20AP4oAGpplAJF7AHN7AE9yACRuACZhFABOJgA3MQAROQAAPwAAQwAARCcARUkARmcAPYAJIIxeAIVzAGx1AExuACZqACdeFwBNJwA4MQAXOAAAPgAAQgAARCgARUcARWEAO3cWJIFYAHpsAGZvAElqACdlAyhcGgBMKAA4MQAbOAAAPQAAQQAARCgAREUAQlwAOW4dJ3ZSAXFlAF9pAEdlAyhgDilZHQBKKAA5MQAgNwAAPAAAPwAAQikAQkIAQFcAOGYiKWxNEmheAFljAERgDilbFipVIAZJKQA5MAAkNgAAOgAAPgoAQCoAQEAAPVEANl4lKmNIG19YDlNdDUFbFipWHCtRIxJHKgA6MAAoNQAOOQAAPBQAPisAPj0AO0wANVYoLFpDIVdRGU1XFz5WHCtQISxMJhpEKwE6MAAsNAAXOAMAOhsAOywAOzsAOUcANE8qLVI/JlBLIEhQHzxQISxJJi1GKSFBLBQ4MAktMwoeNhQHOCEAOS0AODgANkEWM0gsLko7KUhFJUJJJDlJJi1CKS5AKyY8Lh82MBsuMxslNCAbNiYSNi4PNjYWNDwiMkAuL0I3LEA+KjxCKTZCKS46LS85Liw3LygzMCcvMScrMygnMywkMy8kMzMmMjYqMTgvMDk0Ljg3LTY6LTM6LS8wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDCIvIcAAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,24 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#84F5E8" width="4" height="4.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/tNb/wZ7/0mD/4hLV8BqU+2QA/6AA/9YA//8A/f9n7f/R2P//wv//sv//rf//tNb/t9f/xKP/027/4j/W70Ga+nEu/6UA/9YA//8A+/937f/S2f//xf//tv//sv//t9f/u9f/xqn/1Hr/4lbW7lig+HxO/6oA/9cA//8A+f+E7P/T2v//yP//uv//tv//u9f/vtj/yK7/1YX+4mjX7Wmm94Zj/q8A/9gA//4a9/+Q6//V2///yv//vv//uv//vtj/wtn/yrP/1o/84nfY7Xir9ZB0/LMj/tkA/PxP9v+a6v/W2///zf//wv//vv3/wtn/xdr/zbf/15j64oTZ7IWx9JmC+rhS/No/+vpr9P+k6f/X3P//z///xf//wvv/xdr/yNv/z7z/2KH44pDa65G28qKP971s+dti+Pd/8v+s6f/Z3f/+0f//yf//xvj/yNv/y9z/0cH/2an24pvb6py78aqb9cGA99x69fWP8P+06P/a3v/71P//zP//yfb/y9z/zt3/08X/2rH04qbc6abA77Kl88WR9dyN8/Oe7v+75//b3v/31v//z///zfP/zt3/0d3/1cn/27ny4q/c6LDF7rmv8cqg8t2d8fGq7f/C5v/c3//02P//0v//0PH/0d3/1N7/2M7+3MDv4rnd57nK7MC5786t8N6s7u626/zI5v/d3//x2v//1fz/0+//1N7/19//2tL53sft4sLe5sLP6sjC7NK57d+47OzA6ffO5f7e4P/u2/772Pf/1+z/19/82uD63Nb0387q4srf5crU6M7K6tbF6uDE6urJ5/LT5Pff4fnr3fj12/L72ur82uD03eHy3tru4NXo4tLg5NLZ5tXT59rP6OHP5+fS5u3Z5PHg4fLo3/Hv3e3z3ef03eHr4OLr4N7o4dzl4trh49re5Nzb5d7Z5eHZ5eXb5Oje4+rh4url4erp4Ojr3+Xr4OLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uIjdBaGAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,3 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#002924" width="4" height="4.5" x="36" y="25.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEVtAAJPAAA4DgAdHQAAJQAAKAAAKAAAKAoAK0sAX/9FAAAAKAAAKAAAKACqAGNtAAJqAAJNAAA3DgAdHQAAJQAAKAAAKAAAKAsAK0gAQOVKAAAAKAAAKAAAKACcAFtqAAJmAAJMAAA3DwAeHQAAJQAAKAAAKAAAKAwAKkUAN7JSAAAAKAAAKAAAKACQAFRmAAJjAAVLAAA2DwAeHQAAJQAAKAAAKAAAKA0AKkIAM5RiAAAAKAAAKAD/AP+FAE5jAAVfAAdJAAA1EAAeHQAAJAAAKAAAKAAAKA4AKj4AMICaAAwAKAAAKADXAMh7AEhfAAdbAApHAAA1EQAeHQAAJAAAKAAAKAAAKBAAKjsALnEAT/8AKAAAKACgAJVyAENbAApXAA1FAAA0EQAfHAAAIwAAKAAAKAAAKBEAKjgALWQAOLUAAP+xAP+DAHlpAD5XAA1TAA9DAAAzEgAfHAAAIwAAKAAAKAAAKBIAKTUALFkAMYoAAL1tAKNuAGdhADpTAA9PABFBAAAyEwAfHAAAIgAAJwAAKAAAKBMAKTIAK1AALHEAAIhUAHxfAFlZADZPABFKABM/BAAxFAAgHAABIgAAJgAAKAAAKBQAKS8AK0gAJ18AB2xFAGVTAE1RADJKABNEABQ8CQAvFQAgHAAHIQAAJQAAKAAAKBUAKSwAKkAAJFADEVk6AFRIAENJAC5EABQ/ARY4DQAuFgAhHAAOIAAAJAAAJgAAKBYAKSkAJzgAIUQPFUoyAEY/ADtBACo/ARY4Chc0EQIsFwAhHAATHwAAIgAAJAQAJhgAJiYAJDEAHzoUGD0rDTs2BTM5BSc4ChcxERkuFQ0pGAAiGwAZHgALIAEAIg0AIxkAIyMAISoAHjAYGTIlFDAtESsxECMxERknFxomGBUjGhAfGw0aHQ0UHhANHxUHHxoGHx8KHiMSHSYaGycgGSYlFyMnFx8nFxobGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxsbGxumY+xdAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,27 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#A4FFFF" width="4" height="1.5" x="36" y="0" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEX/0fL/3rv/7oP//lbx/1iy/4ZJ/70A//IA//8A//+P///u9f//4P//0P//y///0fL/1PP/4MH/74///mvy/2y3/5Fj/8IA//MA//8A//+b///v9v//4v//1P//z///1PP/2PT/48b/8Jr//nzz/329/5t2/8cA//QA//85//+n///w9///5f//2P//0///2PT/2/X/5cv/8aT//or0/4vD/6WH/8w4//UA//9h//+x///y+P//5///3P//1///2/X/3vb/58//8q3//pf1/5jI/66V/9Bg//ZN//97//+6///z+P//6v//3///2///3vb/4vf/6dT/87b//qP1/6TN/7ei/9V6//Zw//+Q///C///0+f//7P//4///3///4vf/5ff/69n/9b7//672/6/T/7+t/9mP//eI//+h///K///1+v//7v//5v//4///5ff/6Pj/7t3/9sb//7n3/7nY/8e4/96h//ic//+v///R///3+v//8P//6f//5v//6Pj/6/n/8OL/987//8P4/8Pd/87D/+Kw//mt//+8///Y///4+///8v//7P//6f//6/n/7vr/8ub/+Nb//8z5/8zi/9bM/+a+//q8///I///f///5/P//9P//7///7f//7vr/8fv/9Or/+d3//9X6/9Xn/93W/+rK//vJ///T///l///6/P//9v//8v//8P//8fv/9Pz/9u//+uT//977/97s/+Te/+/W//zW///d///r///7/f//+P//9f//8///9Pz/9/3/+fP/++v//+f8/+fx/+vn//Ph//zh///m///w///8/f//+v//9///9v//9/3/+f3/+/f//fL//+/9/+/1//Lv//fs//3s///v///1///9/v///P//+v//+f//+f3//P7//fv//vj///f+//f6//j3//v2//72///3///6///+/v///f///f///P///P7///////////////////////////////////////////////////////////////+NhaN5AAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,0 h 5" class="b"/>
-</g>
-<g>
-  <rect fill="#000000" width="4" height="1.5" x="36" y="28.5" />
-  <image width="16" height="16" transform="scale(2) translate(-.5,0)"  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAADAFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzMPSIAAAAOklEQVR42mNkYEQDAugCCugCBugCDugCAegCCegCBegCDegCE9AFFqALbEAXOIAucAFd4AG6wAc0PgBUTQiBU61qZgAAAABJRU5ErkJggg==" />
-  <path d="m35,30 h 5" class="b"/>
-</g>
-<text x="29.5" y="26" style="text-anchor:end;">H</text>
-<text x="29.5" y="29" style="text-anchor:end;" class="n">360</text>
-<text x="15" y="29" style="text-anchor:middle;" class="n">180</text>
-<text x="6" y="3" style="text-anchor:start;">C*</text>
-<text x="0.5" y="3" style="text-anchor:start;" class="n">100</text>
-<text x="0.5" y="16" style="text-anchor:start;" class="n">50</text>
-<text x="0.5" y="29" style="text-anchor:start;" class="n">0</text>
-<text style="text-anchor:middle;" transform="translate(35,15) rotate(-90)">L*</text>
-<text x="36" y="3" style="text-anchor:end;" class="n">100</text>
-<text x="36" y="29" style="text-anchor:end;" class="n">0</text>
-<text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">LCHuv</text>
 <path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
 </svg><svg xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1774,23 +1139,57 @@
 <text x="36" y="29" style="text-anchor:end;" class="n">0</text>
 <text x="2" y="26" style="fill:#fff;fill-opacity:1;text-anchor:start;">YCbCr</text>
 <path d="m0,0 h40 v30 h-40 z" style="fill:none;stroke:none;" />
-</svg><ul><li><code>Gray</code>, <code>Gray24</code>, and the transparent variants <code>AGray</code>, <code>GrayA</code>, and <code>AGray32</code>.</li></ul><h2 id="Converting-colors-1"><a class="docs-heading-anchor" href="#Converting-colors-1">Converting colors</a><a class="docs-heading-anchor-permalink" href="#Converting-colors-1" title="Permalink"></a></h2><p>Colors.jl allows you to convert from one colorspace to another using the <code>convert</code> function.</p><p>For example:</p><pre><code class="language-julia-repl">julia&gt; using Colors
+</svg><ul><li><code>Gray</code>, <code>Gray24</code>, and the transparent variants <code>AGray</code>, <code>GrayA</code>, and <code>AGray32</code>.</li></ul><h2 id="Color-Parsing-1"><a class="docs-heading-anchor" href="#Color-Parsing-1">Color Parsing</a><a class="docs-heading-anchor-permalink" href="#Color-Parsing-1" title="Permalink"></a></h2><p>You can parse any <a href="https://developer.mozilla.org/en-US/docs/CSS/color">CSS color specification</a> with the exception of <code>currentColor</code>. You can construct colors from strings using the <a href="constructionandconversion.html#Colors.@colorant_str"><code>@colorant_str</code></a> macro and the <a href="constructionandconversion.html#Base.parse"><code>parse</code></a> function.</p><pre><code class="language-julia-repl">julia&gt; using Colors
 
-julia&gt; convert(RGB, HSL(270, 0.5, 0.5))
-RGB{Float64}(0.5,0.25,0.75)</code></pre><p>Depending on the source and destination colorspace, this may not be perfectly lossless.</p><h2 id="Color-Parsing-1"><a class="docs-heading-anchor" href="#Color-Parsing-1">Color Parsing</a><a class="docs-heading-anchor-permalink" href="#Color-Parsing-1" title="Permalink"></a></h2><pre><code class="language-julia-repl">julia&gt; c = colorant&quot;red&quot;
+julia&gt; colorant&quot;red&quot; # named color
 RGB{N0f8}(1.0,0.0,0.0)
 
-julia&gt; parse(Colorant, &quot;red&quot;)
+julia&gt; parse(Colorant, &quot;DeepSkyBlue&quot;) # color names are case-insensitive
+RGB{N0f8}(0.0,0.749,1.0)
+
+julia&gt; colorant&quot;#FF0000&quot; # 6-digit hex notation
 RGB{N0f8}(1.0,0.0,0.0)
 
-julia&gt; parse(Colorant, HSL(1, 1, 1))
-HSL{Float32}(1.0f0,1.0f0,1.0f0)
-
-julia&gt; colorant&quot;#FF0000&quot;
+julia&gt; colorant&quot;#f00&quot; # 3-digit hex notation
 RGB{N0f8}(1.0,0.0,0.0)
 
-julia&gt; parse(Colorant, RGBA(1, 0.5, 1, 0.5))
-RGBA{Float64}(1.0,0.5,1.0,0.5)</code></pre><p>You can parse any <a href="https://developer.mozilla.org/en-US/docs/CSS/color">CSS color specification</a> with the exception of <code>currentColor</code>.</p><p>All CSS/SVG named colors are supported, in addition to X11 named colors, when their definitions do not clash with SVG.</p><p>When writing functions the <code>colorant&quot;red&quot;</code> version is preferred, because the slow step runs when the code is parsed (i.e., during compilation rather than run-time).</p><article class="docstring"><header><a class="docstring-binding" id="Colors.@colorant_str" href="#Colors.@colorant_str"><code>Colors.@colorant_str</code></a> — <span class="docstring-category">Macro</span></header><section><div><pre><code class="language-julia">@colorant_str(ex)</code></pre><p>Parse a literal color name as a Colorant.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/3fbe921c6a4b0b3473b8575dea918132834912fc/src/parse.jl#L214-L218">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Colors.hex" href="#Colors.hex"><code>Colors.hex</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">hex(c::Colorant)
+julia&gt; colorant&quot;rgb(255,0,0)&quot; # rgb() notation with integers in [0, 255]
+RGB{N0f8}(1.0,0.0,0.0)
+
+julia&gt; colorant&quot;rgba(255,0,0,0.6)&quot; # with alpha in [0, 1]
+RGBA{N0f8}(1.0,0.0,0.0,0.6)
+
+julia&gt; colorant&quot;rgba(100%,80%,0%,0.6)&quot; # with &quot;integer&quot; percentages
+RGBA{N0f8}(1.0,0.8,0.0,0.6)
+
+julia&gt; parse(ARGB, &quot;rgba(255,0,0,0.6)&quot;) # you can specify the return type
+ARGB{N0f8}(1.0,0.0,0.0,0.6)
+
+julia&gt; colorant&quot;hsl(120, 100%, 25%)&quot; # hsl() notation
+HSL{Float32}(120.0f0,1.0f0,0.25f0)
+
+julia&gt; colorant&quot;hsla(120, 100%, 25%, 0.6)&quot; # hsla() notation
+HSLA{Float32}(120.0f0,1.0f0,0.25f0,0.6f0)
+
+julia&gt; colorant&quot;transparent&quot; # transparent &quot;black&quot;
+RGBA{N0f8}(0.0,0.0,0.0,0.0)</code></pre><p>All CSS/SVG named colors are supported, in addition to X11 named colors, when their definitions do not clash with SVG. You can find all names and their color swatches in <a href="namedcolors.html#Named-Colors-1">Named Colors</a> page.</p><p>When writing functions the <code>colorant&quot;red&quot;</code> version is preferred, because the slow step runs when the code is parsed (i.e., during compilation rather than run-time).</p><p>The element types of the return types depend on the colorspaces, i.e. the <code>hsl()</code> and <code>hsla()</code> notations return <code>HSL</code>/<code>HSLA</code> colors with <code>Float32</code> elements, and other notations return <code>RGB</code>/<code>RGBA</code> colors with <code>N0f8</code> elements. The result colors can be converted to <code>RGB{N0f16}</code> (for example) using:</p><pre><code class="language-julia-repl">julia&gt; using FixedPointNumbers
+
+julia&gt; RGB{N0f16}(colorant&quot;indianred&quot;)
+RGB{N0f16}(0.80392,0.36078,0.36078)</code></pre><p>or</p><pre><code class="language-julia-repl">julia&gt; parse(RGB{N0f16}, &quot;indianred&quot;)
+RGB{N0f16}(0.80392,0.36078,0.36078)</code></pre><p>You can also pass a color (<code>Colorant</code> value) to the second argument of the <a href="constructionandconversion.html#Base.parse"><code>parse</code></a> function, but in this case, <code>parse</code> does not apply any conversion on the color.</p><pre><code class="language-julia-repl">julia&gt; parse(RGB{N0f8}, HSL{Float64}(120, 1, 0.5)) # use `convert` instead
+HSL{Float64}(120.0,1.0,0.5)</code></pre><p>You can convert colors to hexadecimal strings using the <a href="constructionandconversion.html#Colors.hex"><code>hex</code></a> function. Note that the conversion result does not have the prefix <code>&quot;#&quot;</code>.</p><pre><code class="language-julia-repl">julia&gt; color = colorant&quot;#C0FFEE&quot;
+RGB{N0f8}(0.753,1.0,0.933)
+
+julia&gt; hex(color)
+&quot;C0FFEE&quot;</code></pre><h2 id="Color-Conversions-1"><a class="docs-heading-anchor" href="#Color-Conversions-1">Color Conversions</a><a class="docs-heading-anchor-permalink" href="#Color-Conversions-1" title="Permalink"></a></h2><p>Colors.jl allows you to convert from one colorspace to another using the <code>convert</code> function.</p><p>For example:</p><pre><code class="language-julia-repl">julia&gt; convert(RGB, HSL(270, 0.5, 0.5)) # without the element type
+RGB{Float64}(0.5,0.25,0.75)
+
+julia&gt; convert(RGB{N0f8}, HSL(270, 0.5, 0.5)) # with the element type
+RGB{N0f8}(0.502,0.251,0.749)</code></pre><p>Depending on the source and destination colorspace, this may not be perfectly lossless.</p><hr/><article class="docstring"><header><a class="docstring-binding" id="Colors.@colorant_str" href="#Colors.@colorant_str"><code>Colors.@colorant_str</code></a> — <span class="docstring-category">Macro</span></header><section><div><pre><code class="language-julia">@colorant_str(ex)</code></pre><p>Parse a literal color name as a Colorant.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/a447509004d10099b8ee4445dfdb8fdc097dec61/src/parse.jl#L214-L218">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.parse" href="#Base.parse"><code>Base.parse</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">parse(Colorant, desc)</code></pre><p>Parse a color description.</p><p>This parses a subset of HTML/CSS color specifications. In particular, everything is supported but: <code>currentColor</code>.</p><p>It does support named colors (though it uses X11 named colors, which are slightly different than W3C named colors in some cases), <code>rgb()</code>, <code>hsl()</code>, <code>#RGB</code>, and <code>#RRGGBB</code> syntax.</p><p><strong>Arguments</strong></p><ul><li><code>Colorant</code>: literal Colorant</li><li><code>desc</code>: color name or description</li></ul><p>A literal Colorant will parse according to the <code>desc</code> string (usually returning an <code>RGB</code>); any more specific choice will return a color of the specified type.</p><p><strong>Returns</strong></p><ul><li><p>an <code>RGB{N0f8}</code> color, or</p></li><li><p>an <code>HSL</code> color if <code>hsl(h, s, l)</code> was used</p></li><li><p>an <code>RGBA</code> color if <code>rgba(r, g, b, a)</code> was used</p></li><li><p>an <code>HSLA</code> color if <code>hsla(h, s, l, a)</code> was used</p></li><li><p>an <code>ARGB{N0f8}</code> color if <code>0xAARRGGBB</code>/<code>0xARGB</code> was used</p></li><li><p>a specific <code>Colorant</code> type as specified in the first argument</p></li></ul><div class="admonition is-info"><header class="admonition-header">Note for X11 named colors</header><div class="admonition-body"><p>The X11 color names with spaces (e.g. &quot;sea green&quot;) are not recommended because they are not allowed in the SVG/CSS.</p></div></div><div class="admonition is-info"><header class="admonition-header">Note for hex notations</header><div class="admonition-body"><p>You can parse not only the CSS-style hex notations <code>#RRGGBB</code>/<code>#RGB</code>, but also <code>0xRRGGBB</code>/<code>0xRGB</code>.</p><p>You can also parse the 8-digit or 4-digit hex notation into an RGB color with alpha. However, the result depends on the prefix (i.e. <code>#</code> or <code>0x</code>).</p><pre><code class="language-">julia&gt; parse(Colorant, &quot;#FF8800AA&quot;) # transparent orange
+RGBA{N0f8}(1.0,0.533,0.0,0.667)
+
+julia&gt; parse(Colorant, &quot;0xFF8800AA&quot;) # opaque purple
+ARGB{N0f8}(0.533,0.0,0.667,1.0)</code></pre></div></div></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/a447509004d10099b8ee4445dfdb8fdc097dec61/src/parse.jl#L158-L209">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Colors.hex" href="#Colors.hex"><code>Colors.hex</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">hex(c::Colorant)
 hex(c::Colorant, style::Symbol)</code></pre><p>Convert a color to a hexadecimal string, optionally specifying its style.</p><p><strong>Arguments</strong></p><ul><li><code>c</code>: a target color.</li><li><code>style</code>: a symbol to specify the hexadecimal notation. Spesifying the uppercase symbols means the return values are in uppercase. The following symbols are available:<ul><li><code>:AUTO</code>: notation automatically selected according to the type of <code>c</code></li><li><code>:RRGGBB</code>/<code>:rrggbb</code>: 6-digit opaque notation</li><li><code>:AARRGGBB</code>/<code>:aarrggbb</code>: 8-digit notation with alpha at the head</li><li><code>:RRGGBBAA</code>/<code>:rrggbbaa</code>: 8-digit notation with alpha at the tail</li><li><code>:RGB</code>/<code>:rgb</code>/<code>:ARGB</code>/<code>:argb</code>/<code>:RGBA</code>/<code>:rgba</code>: 3-digit or 4-digit noatation</li><li><code>:S</code>/<code>:s</code>: short notation if available</li></ul></li></ul><p><strong>Examples</strong></p><pre><code class="language-julia-repl">julia&gt; hex(RGB(1,0.5,0))
 &quot;FF8000&quot;
 
@@ -1807,8 +1206,5 @@ julia&gt; hex(ARGB(1,0.533,0,0.267), :rgba)
 &quot;f804&quot;
 
 julia&gt; hex(ARGB(1,0.533,0,0.267), :S)
-&quot;4F80&quot;</code></pre><div class="admonition is-compat"><header class="admonition-header">Compat</header><div class="admonition-body"><p>For backward compatibility, <code>hex(c::ColorAlpha)</code> currently returns an &quot;AARRGGBB&quot; style string. This is inconsistent with <code>hex(c, :AUTO)</code> returning an &quot;RRGGBBAA&quot; style string. The alpha position for <code>ColorAlpha</code> will soon be changed to the tail.</p></div></div></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/3fbe921c6a4b0b3473b8575dea918132834912fc/src/utilities.jl#L27-L71">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Base.parse" href="#Base.parse"><code>Base.parse</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">parse(Colorant, desc)</code></pre><p>Parse a color description.</p><p>This parses a subset of HTML/CSS color specifications. In particular, everything is supported but: <code>currentColor</code>.</p><p>It does support named colors (though it uses X11 named colors, which are slightly different than W3C named colors in some cases), <code>rgb()</code>, <code>hsl()</code>, <code>#RGB</code>, and <code>#RRGGBB</code> syntax.</p><p><strong>Arguments</strong></p><ul><li><code>Colorant</code>: literal Colorant</li><li><code>desc</code>: color name or description</li></ul><p>A literal Colorant will parse according to the <code>desc</code> string (usually returning an <code>RGB</code>); any more specific choice will return a color of the specified type.</p><p><strong>Returns</strong></p><ul><li><p>an <code>RGB{N0f8}</code> color, or</p></li><li><p>an <code>HSL</code> color if <code>hsl(h, s, l)</code> was used</p></li><li><p>an <code>RGBA</code> color if <code>rgba(r, g, b, a)</code> was used</p></li><li><p>an <code>HSLA</code> color if <code>hsla(h, s, l, a)</code> was used</p></li><li><p>an <code>ARGB{N0f8}</code> color if <code>0xAARRGGBB</code>/<code>0xARGB</code> was used</p></li><li><p>a specific <code>Colorant</code> type as specified in the first argument</p></li></ul><div class="admonition is-info"><header class="admonition-header">Note for X11 named colors</header><div class="admonition-body"><p>The X11 color names with spaces (e.g. &quot;sea green&quot;) are not recommended because they are not allowed in the SVG/CSS.</p></div></div><div class="admonition is-info"><header class="admonition-header">Note for hex notations</header><div class="admonition-body"><p>You can parse not only the CSS-style hex notations <code>#RRGGBB</code>/<code>#RGB</code>, but also <code>0xRRGGBB</code>/<code>0xRGB</code>.</p><p>You can also parse the 8-digit or 4-digit hex notation into an RGB color with alpha. However, the result depends on the prefix (i.e. <code>#</code> or <code>0x</code>).</p><pre><code class="language-">julia&gt; parse(Colorant, &quot;#FF8800AA&quot;) # transparent orange
-RGBA{N0f8}(1.0,0.533,0.0,0.667)
-
-julia&gt; parse(Colorant, &quot;0xFF8800AA&quot;) # opaque purple
-ARGB{N0f8}(0.533,0.0,0.667,1.0)</code></pre></div></div></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/3fbe921c6a4b0b3473b8575dea918132834912fc/src/parse.jl#L158-L209">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="index.html">« Introduction</a><a class="docs-footer-nextpage" href="colordifferences.html">Color Differences »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Friday 21 February 2020 11:49">Friday 21 February 2020</span>. Using Julia version 1.0.5.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
+&quot;4F80&quot;</code></pre><div class="admonition is-compat"><header class="admonition-header">Compat</header><div class="admonition-body"><p>For backward compatibility, <code>hex(c::ColorAlpha)</code> currently returns an &quot;AARRGGBB&quot; style string. This is inconsistent with <code>hex(c, :AUTO)</code> returning an &quot;RRGGBBAA&quot; style string. The alpha position for <code>ColorAlpha</code> will soon be changed to the tail.</p></div></div></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/a447509004d10099b8ee4445dfdb8fdc097dec61/src/utilities.jl#L55-L99">source</a></section></article><article class="docstring"><header><a class="docstring-binding" id="Colors.normalize_hue" href="#Colors.normalize_hue"><code>Colors.normalize_hue</code></a> — <span class="docstring-category">Function</span></header><section><div><pre><code class="language-julia">normalize_hue(h::Real)
+normalize_hue(c::Colorant)</code></pre><p>Returns a normalized (wrapped-around) hue angle, or a color with the normalized hue, in degrees, in [0, 360]. The normalization is essentially equivalent to <code>mod(h, 360)</code>, but is faster at the expense of some accuracy.</p></div><a class="docs-sourcelink" target="_blank" href="https://github.com/kimikage/Colors.jl/blob/a447509004d10099b8ee4445dfdb8fdc097dec61/src/utilities.jl#L178-L185">source</a></section></article></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="index.html">« Introduction</a><a class="docs-footer-nextpage" href="colordifferences.html">Color Differences »</a></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> on <span class="colophon-date" title="Thursday 12 March 2020 21:49">Thursday 12 March 2020</span>. Using Julia version 1.0.5.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
